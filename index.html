@@ -1,0 +1,349 @@
+---
+# Feel free to add content and custom Front Matter to this file.
+# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+
+layout: default
+title: SpoonMe
+---
+<section class="hero-top pt-60 bg-gradient-to-b from-primary-100 to-primary-400 flex flex-col gap-8 items-center rounded-b-4xl lg:rounded-none overflow-hidden relative h-fit">
+    
+    <div class="container flex flex-col max-w-3xl gap-6 items-center text-center px-8">
+        <div class="info flex flex-col gap-4 items-center">
+            <h1 class="text-5xl font-semibold text-balance text-primary-900">Eat mindfully and prioritize connection over fad diets or weight loss obsession.</h1>
+            <p class="text-xl text-balance">Not everyone is craving to lose pounds. Most of us want connection and community and to celebrate the joy of food. Spoonme helps you eat deliberately, discover great food, and connect with your people</p>
+        </div>
+        <div class="cta flex flex-col gap-3 items-center relative">
+            <a href="#" class="px-10 py-4 bg-white w-fit rounded-3xl font-bold inline-flex gap-2 hover:bg-primary-50 transition-colors ease-in-out">Try free <span id="giftBtn"></span> for 30 days</a>
+            <p class="text-xs text-balance max-w-2xl">No credit card required. We aren’t trying to trick you into forgetting to getyour money. We want you to be deliberate about signing up.</p>
+            <div id="arrowLine" class="hidden md:block absolute top-0 right-0"></div>
+            <div class="hidden md:flex absolute -bottom-16 -left-6 w-16 h-16 rounded-40px bg-yellow-300 items-center justify-center"><div id="megaphone"></div></div>
+        </div>
+    </div>
+    
+    <div class="content-media relative w-full h-fit flex justify-center pointer-events-none">
+        <span class="absolute w-fit h-fit z-0 bottom-0 pointer-events-none">
+            <img src="/assets/images/hero/bg-hero.svg" alt="" class="w-fit">
+        </span>
+        <picture class="relative -rotate-12 top-8">
+            <img class="w-fit relative" src="/assets/images/hero/app-hero-posts.png" alt="">
+            <img src="/assets/images/hero/app-hero-posts-highlight.png" alt="" class="absolute top-44 -left-8 drop-shadow-2xl">
+        </picture>
+        <picture class="relative rotate-6 top-20">
+            <img class="w-fit relative" src="/assets/images/hero/app-hero-home.png" alt="">
+            <span id="summaryApp" class="absolute top-24 left-12 drop-shadow-2xl scale-105"></span>
+        </picture>
+    </div>
+    
+    <div class="hidden lg:block wave-divider w-full absolute -bottom-[2px] h-auto z-20 pointer-events-none">
+        <img src="/assets/images/wave-divider.svg" alt="" class="w-full h-auto object-cover">
+    </div>
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials py-28 flex flex-col gap-16 items-center relative bg-[url('/assets/images/bg-testimonials.svg')] bg-contain bg-center bg-no-repeat">
+    <div class="container flex flex-col max-w-2xl gap-6">
+        <div class="info flex flex-col gap-4 items-center text-center">
+            <div class="info--icon w-20 aspect-square flex items-center justify-center rounded-full bg-primary-200 pointer-events-none">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class=" animate-pulse">
+                    <path d="M12.6988 3.45308L14.9056 8.09874C14.9558 8.21666 15.0347 8.31879 15.1346 8.39497C15.2344 8.47115 15.3516 8.51871 15.4746 8.53292L20.3461 9.28548C20.4871 9.30439 20.6201 9.36475 20.7295 9.45952C20.8389 9.55429 20.9201 9.67956 20.9638 9.82069C21.0075 9.96183 21.0117 10.113 20.9761 10.2566C20.9404 10.4001 20.8663 10.5301 20.7625 10.6314L17.2511 14.264C17.1615 14.3513 17.0942 14.4606 17.0554 14.5819C17.0167 14.7033 17.0076 14.8328 17.029 14.9587L17.8756 20.0675C17.9002 20.2143 17.8847 20.3653 17.8309 20.5034C17.7772 20.6414 17.6874 20.761 17.5717 20.8485C17.456 20.9359 17.3191 20.9878 17.1765 20.9981C17.034 21.0084 16.8915 20.9768 16.7653 20.9069L12.3796 18.49C12.2673 18.4325 12.1439 18.4026 12.0188 18.4026C11.8937 18.4026 11.7702 18.4325 11.6579 18.49L7.27219 20.9069C7.14602 20.9768 7.00355 21.0084 6.861 20.9981C6.71845 20.9878 6.58154 20.9359 6.46585 20.8485C6.35017 20.761 6.26034 20.6414 6.2066 20.5034C6.15287 20.3653 6.13737 20.2143 6.16189 20.0675L7.0085 14.9008C7.02995 14.7749 7.02088 14.6454 6.98209 14.524C6.94331 14.4027 6.87605 14.2934 6.78643 14.2061L3.23345 10.6314C3.12833 10.5274 3.05441 10.3937 3.02063 10.2468C2.98686 10.0998 2.99468 9.94575 3.04315 9.80331C3.09162 9.66087 3.17866 9.53614 3.29372 9.44423C3.40879 9.35232 3.54694 9.29718 3.69145 9.28548L8.56293 8.53292C8.68589 8.51871 8.80314 8.47115 8.90298 8.39497C9.00282 8.31879 9.08177 8.21666 9.13196 8.09874L11.3387 3.45308C11.3988 3.31778 11.4948 3.20322 11.6153 3.12294C11.7358 3.04266 11.8758 3 12.0188 3C12.1618 3 12.3018 3.04266 12.4223 3.12294C12.5428 3.20322 12.6387 3.31778 12.6988 3.45308Z" stroke="#5D42C8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>                    
+            </div>
+            <h2 class="text-5xl font-semibold font-outfit text-primary-900">People really like Spoonme</h2>
+            <p class="text-xl">Not everyone wants to lose weight. We are building an app where you can eat deliberately and celebrate the joy of food with the people you love (or just like).</p>
+        </div>
+
+    </div>
+
+    <div class="container testimonials-carousel w-full max-w-screen-2xl relative">
+        <div class="py-8 w-[300px] md:w-[400px] mr-8">
+            <div class="testimonial-item bg-pink-200 p-8 pt-0 rounded-40px relative">
+                <div class="flex flex-row items-end gap-4 relative -top-4">
+                    <picture>
+                        <img src="/assets/images/profile-testimonial-4.jpg" class="w-20 bg-white aspect-square rounded-full border-4 border-pink-200" alt="">
+                    </picture>
+                    <h3 class="font-semibold text-2xl mb-4">Michael Johnson</h3>
+                </div>
+                <p>“In positive news, HEY seems to have finally solved email (!!!). Been using it several weeks and no longer dealing with spam, long lists of “unread” messages, or sorting out annoying but important docs. The relief is so real. 🙌”</p>
+            </div>
+        </div>
+
+        <div class="py-8 w-[300px] md:w-[400px] mr-8">
+            <div class="testimonial-item bg-green-200 p-8 pt-0 rounded-40px relative">
+                <div class="flex flex-row items-end gap-4 relative -top-4">
+                    <picture>
+                        <img src="/assets/images/profile-testimonial-3.jpg" class="w-20 bg-white aspect-square rounded-full border-4 border-green-200" alt="">
+                    </picture>
+                    <h3 class="font-semibold text-2xl mb-4">Jacob Smith</h3>
+                </div>
+                <p>“I just got an early demo of HEY from @jasonfried. I can confirm this will be my new default email over Gmail… it’s a beautiful rethinking of everything wrong with email. I can’t wait for you all to play with it soon.”</p>
+            </div>
+        </div>
+        <div class="py-8 w-[300px] md:w-[400px] mr-8">
+            <div class="testimonial-item bg-orange-200 p-8 pt-0 rounded-40px relative">
+                <div class="flex flex-row items-end gap-4 relative -top-4">
+                    <picture>
+                        <img src="/assets/images/profile-testimonial-2.jpg" class="w-20 bg-white aspect-square rounded-full border-4 border-orange-200" alt="">
+                    </picture>
+                    <h3 class="font-semibold text-2xl mb-4">Emma Williams</h3>
+                </div>
+                <p>“I just got an early demo of HEY from @jasonfried. I can confirm this will be my new default email over Gmail… it’s a beautiful rethinking of everything wrong with email. I can’t wait for you all to play with it soon.”</p>
+            </div>
+        </div>
+        <div class="py-8 w-[300px] md:w-[400px] mr-8">
+            <div class="testimonial-item bg-purple-200 p-8 pt-0 rounded-40px relative">
+                <div class="flex flex-row items-end gap-4 relative -top-4">
+                    <picture>
+                        <img src="/assets/images/profile-testimonial-1.jpg" class="w-20 bg-white aspect-square rounded-full border-4 border-purple-200" alt="">
+                    </picture>
+                    <h3 class="font-semibold text-2xl mb-4">Emma Williams</h3>
+                </div>
+                <p>“I just got an early demo of HEY from @jasonfried. I can confirm this will be my new default email over Gmail… it’s a beautiful rethinking of everything wrong with email. I can’t wait for you all to play with it soon.”</p>
+            </div>
+        </div>       
+    </div>
+    <span class="hidden lg:flex flare bg-pink-100 w-[580px] h-[400px] rounded-full absolute -left-10 top-1/3 blur-3xl -z-10"></span>
+</section>
+
+<!-- Features -->
+<div class="px-8 py-32 flex flex-col gap-32 items-center" id="features">
+    <div class="features container flex flex-col md:flex-row max-w-7xl gap-12 items-center justify-between">
+        <div class="features--info w-full flex flex-col gap-6">
+            <div class="info--icon w-16 aspect-square flex items-center justify-center rounded-full bg-orange-200 pointer-events-none">
+                <img src="/assets/images/icons/icon-who-is-spoonme.svg" alt="" class="">                  
+            </div>
+            <h2 class="font-outfit text-5xl font-medium">Who is Spoonme best suited for?</h2>
+            <div class="features--info--question">
+                <h3 class="text-xl font-semibold mb-4">People who want to connect and eat deliberately with their loved ones and friends</h3>
+                <p class="text-xl">Are you done with obsessing over some extra pounds you are carrying or if you hit your macros perfectly? We are too. We want to eat deliberately and healthy, but we want fun, friends, and community to be a central part of that. We want you to connect with people, eat deliberately, and find the food that others are posting that make your healthy (and delicious!) journey easier to achieve.</p>
+            </div>
+            <div class="features--info--question">
+                <h3 class="text-xl font-semibold mb-4">People who love to create content and share their love of food</h3>
+                <p class="text-xl">We are building a platform that prioritizes the needs and wants of creators. We are in the early stages right now, but are looking forward to making the most creator friendly platform on the planet. If you are a fitness enthusiast and want to share what you eat with your followers.</p>
+            </div>
+        </div>
+        <div class="features--media rounded-3xl bg-orange-300 w-full aspect-square relative overflow-hidden">
+            <span class="flare bg-yellow-200/40 w-[400px] h-[400px] rounded-full absolute -top-10 -left-10 rotate-45 blur-3xl"></span>
+            <span class="flare bg-orange-400/80 w-[500px] h-[400px] rounded-full absolute bottom-0 -right-10 rotate-45 blur-3xl"></span>
+            <picture class="flex w-full aspect-square relative overflow-hidden">
+                <img class="absolute left-12 -top-20" src="/assets/images/features-1-mobiless-2.png" alt="">
+                <img class="absolute right-12 top-12" src="/assets/images/features-1-mobiless-1.png" alt="">
+            </picture>
+            <span class="w-full h-48 bg-gradient-to-t from-orange-300 to-transparent absolute bottom-0 flex"></span>
+        </div>
+    </div>
+
+    <div class="features container flex flex-col md:flex-row-reverse max-w-7xl gap-12 items-center justify-between">
+        <div class="features--info w-full flex flex-col gap-6">
+            <div class="info--icon w-16 aspect-square flex items-center justify-center rounded-full bg-green-200 pointer-events-none">
+                <img src="/assets/images/icons/icon-food-is-social.svg" alt="" class="">                  
+            </div>
+            <h2 class="text-5xl font-medium">Food is social. Spoonme puts community first</h2>
+            <p class="text-xl">Other applications are obsessed with weight loss. Spoonme is different. Spoonme wants to enable you to eat deliberately, but the beauty is really in the community. See what your friends and family are eating, save recipes to your cookbooks that you discover in your Feed, and effortlessly add recipes to your own cookbooks.</p>
+            <p class="text-xl">Make your profile public if you have followers that want to see how you eat for inspiration. Or make it public if you are a foodie and your friends want to see what restaurants you are discovering.</p>
+        </div>
+        <div class="features--media rounded-3xl bg-green-300 w-full aspect-square relative overflow-hidden">
+            <span class="flare bg-yellow-200/40 w-[400px] h-[400px] rounded-full absolute -top-10 -left-10 rotate-45 blur-3xl"></span>
+            <span class="flare bg-green-400/80 w-[500px] h-[400px] rounded-full absolute bottom-0 -right-10 rotate-45 blur-3xl"></span>
+            <picture class="flex w-full aspect-square relative overflow-hidden">
+                <img class="absolute left-12 top-32" src="/assets/images/features-2-mobiless-2.png" alt="">
+                <img class="absolute right-12 top-12" src="/assets/images/features-2-mobiless-1.png" alt="">
+            </picture>
+            <span class="w-full h-48 bg-gradient-to-t from-green-300 to-transparent absolute bottom-0 flex"></span>
+        </div>
+    </div>
+
+    <div class="features container flex flex-col md:flex-row max-w-7xl gap-12 items-center justify-between">
+        <div class="features--info w-full flex flex-col gap-6">
+            <div class="info--icon w-16 aspect-square flex items-center justify-center rounded-full bg-purple-200 pointer-events-none">
+                <img src="/assets/images/icons/icon-incredibly-fast-food.svg" alt="" class="">                  
+            </div>
+            <h2 class="text-5xl font-medium">Incredibly fast food entry, curated</h2>
+            <p class="text-xl text-balance">Food apps should enable you to track your food quickly, while spending as little time as possible in the app. We don’t make more money the longer you stay in the app. We are trying to get you in and out as quickly as possible. We have a curated list of over 400,000 foods (that we are continually adding to) to help you quickly track what you are eating. And for those who prefer a more visual view, we have the option to upload a photo so you can see what you ate today in a snapshot. If you find some foods that aren’t in the database, reach out to <link to Mike> to get it added. We are a small team, and we are here for you to make life easier.</p>
+        </div>
+        <div class="features--media rounded-3xl bg-purple-300 w-full aspect-square relative overflow-hidden">
+            <span class="flare bg-pink-200/80 w-[200px] h-[200px] rounded-full absolute top-0 rotate-45 blur-3xl"></span>
+            <span class="flare bg-yellow-200/50 w-[500px] h-[400px] rounded-full absolute bottom-0 -right-10 rotate-45 blur-3xl"></span>
+            <picture class="flex w-full aspect-square relative overflow-hidden">
+                <img class="absolute left-24 -top-12 -rotate-12" src="/assets/images/features-3-mobiless-2.png" alt="">
+                <img class="absolute right-24 top-24 -rotate-12" src="/assets/images/features-3-mobiless-1.png" alt="">
+            </picture>
+            <span class="w-full h-48 bg-gradient-to-t from-purple-300 to-transparent absolute bottom-0 flex"></span>
+        </div>
+    </div>
+</div>
+
+<!-- About -->
+<section class="testimonials px-8 py-28 flex flex-col gap-16 items-center">
+    <div class="container flex flex-col max-w-2xl gap-6 items-center text-center">
+        <div class="info flex flex-col gap-4 items-center">
+            <div class="info--icon w-20 aspect-square flex items-center justify-center rounded-full bg-yellow-200 pointer-events-none">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.10752 3.06509C9.88759 2.4013 10.8948 2 11.9998 2C13.0692 2 14.0471 2.37591 14.8161 3.00189C15.1885 2.89008 15.5834 2.82996 15.9934 2.82996C18.3015 2.82996 20.1356 4.73613 20.1356 7.04139C20.1356 8.16508 19.701 9.3709 19.024 10.3018C18.9177 10.448 18.8017 10.592 18.6766 10.731C20.1645 11.5045 21.3234 12.8201 22.1312 14.021C23.5457 16.1238 22.9066 19.0842 20.4739 20.1627C19.3233 20.6729 18.0687 20.9882 16.7525 21.0678C15.3227 21.6685 13.7529 22 12.1078 22C10.4872 22 8.93958 21.6783 7.52705 21.0945C6.07347 21.0543 4.68865 20.7302 3.42779 20.1749C0.98657 19.0996 0.329541 16.134 1.70891 14.0087C2.4822 12.8172 3.59297 11.5149 5.04781 10.7441C4.92 10.6035 4.80162 10.4575 4.69316 10.3093C4.01176 9.37799 3.57379 8.17082 3.57379 7.04506C3.57379 4.73308 5.42283 2.83187 7.73678 2.83187C8.21794 2.83187 8.679 2.91407 9.10752 3.06509ZM7.8327 4.83402C7.80088 4.83259 7.7689 4.83187 7.73678 4.83187C6.55698 4.83187 5.57379 5.80784 5.57379 7.04506C5.57379 7.69391 5.84387 8.49498 6.30725 9.12829C6.77712 9.77049 7.30158 10.0587 7.7304 10.0615L7.73606 10.0615L7.74294 10.0615C7.97631 10.06 8.238 9.97403 8.50382 9.79243C7.88527 8.82873 7.49976 7.65411 7.49976 6.55556C7.49976 5.94763 7.61792 5.36609 7.8327 4.83402ZM7.22909 12.0985C5.68393 12.3248 4.3816 13.5643 3.38655 15.0975C2.60421 16.3029 3.04134 17.8192 4.23398 18.3446C4.43297 18.4322 4.63577 18.5128 4.84211 18.5861C4.35528 17.3341 4.46657 15.8591 5.2204 14.6339C5.73914 13.7908 6.40803 12.8843 7.22909 12.0985ZM19.4209 18.4375C19.5023 18.4043 19.5831 18.3699 19.6633 18.3344C20.8446 17.8107 21.2637 16.3146 20.4718 15.1373C19.5279 13.7342 18.3174 12.5632 16.9356 12.1846C17.744 12.9513 18.4135 13.8247 18.9384 14.64C19.6915 15.8096 19.8372 17.2172 19.4209 18.4375ZM15.4241 9.90141C15.6205 10.0043 15.8106 10.0539 15.984 10.0556L15.9926 10.0556L16.0025 10.0556C16.4224 10.0516 16.9403 9.76655 17.4065 9.12547C17.8667 8.49264 18.1356 7.69132 18.1356 7.04139C18.1356 5.86216 17.2526 4.92863 16.1681 4.83729C16.3821 5.36847 16.4998 5.94888 16.4998 6.55556C16.4998 7.69587 16.0844 8.91815 15.4241 9.90141ZM11.9998 4C10.6338 4 9.49976 5.12926 9.49976 6.55556C9.49976 7.29894 9.80757 8.20701 10.3319 8.92366C10.8651 9.6524 11.4767 10 11.9998 10C12.5228 10 13.1344 9.6524 13.6676 8.92366C14.192 8.207 14.4998 7.29894 14.4998 6.55556C14.4998 5.12926 13.3657 4 11.9998 4ZM11.9993 12C9.88203 12 8.15264 13.6848 6.9238 15.682C6.16248 16.9193 6.59221 18.4489 7.79369 19.0244C9.09863 19.6495 10.5609 20 12.1078 20C13.6547 20 15.117 19.6495 16.4219 19.0244C17.6214 18.4499 18.0354 16.932 17.2568 15.7227C15.9652 13.7165 14.139 12 11.9993 12Z" fill="#AF7F03"/>
+                </svg>                    
+            </div>
+            <h2 class="text-5xl font-semibold font-outfit text-primary-900">About our company</h2>
+            <p class="text-xl font-light">We wanted a food app that was fun and a joy to use. Not, in essence, an admin tool. We created Spoonme to connect with people, share the recipes we love, host salsa parties, and help us be deliberate in our eating habits.</p>
+        </div>
+
+    </div>
+    <div class="relative container max-w-5xl flex flex-col md:flex-row gap-16 items-center justify-between">
+        <picture class="w-full relative flex justify-center">
+            <img src="/assets/images/matt.jpg" class="w-96 aspect-square rounded-4xl rotate-6" alt="">
+            <div class="dot-logo w-32 aspect-square bg-white flex items-center justify-center rounded-full absolute top-0 right-0">
+                <img src="/assets/images/logo-icon.svg" alt="" class="rotate-12">
+            </div>
+            
+            <span class="dot-purple bg-purple-400 rounded-full w-4 aspect-square absolute -left-10 top-40 rotate-12"></span>
+            <span class="dot-purple bg-primary-500 rounded-3xl w-24 aspect-square absolute left-0 -top-10 rotate-12"></span>
+            <span class="dot-green hidden md:block bg-emerald-300 rounded-2xl w-12 aspect-square absolute -right-10 -bottom-10 -rotate-12"></span>
+            <span class="dot-pink bg-pink-500 rounded-3xl w-32 aspect-square absolute -left-10 -bottom-10 -rotate-12 -z-10"></span>
+            <span class="flare bg-primary-200 w-[500px] h-[400px] rounded-full blur-3xl absolute -left-64 -top-24 -z-10 rotate-12"></span>
+        </picture>
+        <div class="content-info flex-col flex gap-6 w-full relative">
+            <h3 class="fount-outfit text-2xl font-medium">Our Founders: Matt Duff</h3>
+            <p class="text-xl font-light">
+                Matt and Kylee founded and financed Spoonme. We work an untraditional work schedule (up to 25 hours per week) and have very few meetings. We are trying to reimagine what healthy work looks like as much as what healthy eating looks like!
+                <br>
+                Mike is responsible for the Spoonme database of foods, refining the data on Michael Johnson the platform (which will soon include restaurant check ins), and thinking through the ...
+            </p>
+            <span class="absolute -top-20 right-40"><img src="/assets/images/icons/icon-flame.svg" alt=""></span>
+            <span class="dot-orange hidden lg:flex bg-orange-400 rounded-full w-2 aspect-square absolute -right-10 top-0"></span>
+        </div>
+    </div>
+</section>
+
+<!-- Subscribe -->
+<section class="subscribe-block bg-primary-200 px-4 py-20 flex justify-center relative overflow-hidden">
+    <div class="flare bg-yellow-200/20 w-96 h-96 blur-3xl absolute top-0 -left-10 z-0"></div>
+    <div class="flare bg-pink-200/80 w-96 h-96 blur-3xl absolute -right-10 z-0"></div>
+    
+    <div class="container max-w-7xl flex flex-col lg:flex-row items-center gap-8 relative">
+        <div class="subscribe-block--content flex flex-col gap-4">
+            <h2 class="font-outfit font-semibold text-3xl">Subscribe to Spoonme's Journey</h2>
+            <p class="text-xl font-light">Want to follow along on our journey and get infrequent emails with recipes, tips on social eating,and follow along with Spoonme’s progress?</p>
+        </div>
+        <div class="subscribe-block--form w-full">
+            <form action="" class="flex flex-row w-full justify-between items-center relative">
+                <input type="email" placeholder="Enter e-mail address here" class="p-6 w-full rounded-full bg-white focus:outline focus:outline-offset-2 focus:outline-4 outline-primary-500">
+                <button class="py-4 px-8 bg-primary-900 text-white rounded-full hover:bg-primary-800 absolute right-2">Send</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Blog resources -->
+
+<section class="blogposts py-28 flex flex-col gap-16 items-center relative">
+    <div class="container flex flex-col max-w-7xl px-4 gap-6">
+        <div class="info flex flex-col lg:flex-row gap-4 justify-between lg:items-center">
+            <h2 class="text-5xl font-medium text-primary-900">Check out these resources to read more</h2>
+            <a href="#" class="py-4 w-fit font-medium border-b-2 border-primary-900">See more</a>
+        </div>
+
+    </div>
+
+    <div class="container blogposts-carousel w-full max-w-screen-2xl relative">
+        <div class="py-8 w-[300px] md:w-[400px] mr-8">
+            <article class="blogpost-item bg-neutral-50 rounded-40px relative overflow-hidden">
+                <div class="blogpost-item--thumbnail w-full">
+                    <img src="https://source.unsplash.com/random/?Landscape/" alt="Thumbnail for Post 1" class="object-cover w-full aspect-4/3 overflow-hidden rounded-40px">
+                </div>
+                <div class="blogpost-item--details p-6 gap-3 flex-col flex">
+                    <header>
+                    <div class="author-info flex flex-row gap-4 items-center">
+                        <img src="https://source.unsplash.com/random/?Portrait/" alt="Author Avatar" class="author-avatar w-8 aspect-square rounded-full">
+                        <span class="author-name">Skylar Westervelt</span>
+                        <span class="text-primary-500">·</span>
+                        <span class="post-meta text-primary-800"><time datetime="2024-05-01">May 1, 2024</time></span>
+                    </div>
+                    </header>
+                    <h3 class="text-2xl font-medium"><a href="#">A Cold Day for Mortar Explosions</a></h3>
+                    <p class="post-description font-light text-xl line-clamp-3">How I responded to two near-death experiences in Iraq haunted me for years — Bright but cold winter days, the sun illuminating a barren landscape, transport me back to deadly attacks on similar days at a U.S.</p>
+                    <div class="post-stats inline-flex items-center gap-4 text-xs">
+                    <span class="post-likes inline-flex gap-2 items-center"><img src="/assets/images/icons/icon-heart.svg" alt="">100 likes</span>
+                    <span class="text-primary-500">·</span>
+                    <span class="post-min-read text-primary-800">5 min read</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <div class="py-8 w-[300px] md:w-[400px] mr-8">
+            <article class="blogpost-item bg-neutral-50 rounded-40px relative overflow-hidden">
+                <div class="blogpost-item--thumbnail w-full">
+                    <img src="https://source.unsplash.com/random/?Landscape/" alt="Thumbnail for Post 1" class="object-cover w-full aspect-4/3 overflow-hidden rounded-40px">
+                </div>
+                <div class="blogpost-item--details p-6 gap-3 flex-col flex">
+                    <header>
+                    <div class="author-info flex flex-row gap-4 items-center">
+                        <img src="https://source.unsplash.com/random/?Portrait/" alt="Author Avatar" class="author-avatar w-8 aspect-square rounded-full">
+                        <span class="author-name">Skylar Westervelt</span>
+                        <span class="text-primary-500">·</span>
+                        <span class="post-meta text-primary-800"><time datetime="2024-05-01">May 1, 2024</time></span>
+                    </div>
+                    </header>
+                    <h3 class="text-2xl font-medium"><a href="#">A Cold Day for Mortar Explosions</a></h3>
+                    <p class="post-description font-light text-xl line-clamp-3">How I responded to two near-death experiences in Iraq haunted me for years — Bright but cold winter days, the sun illuminating a barren landscape, transport me back to deadly attacks on similar days at a U.S.</p>
+                    <div class="post-stats inline-flex items-center gap-4 text-xs">
+                        <span class="post-likes inline-flex gap-2 items-center"><img src="/assets/images/icons/icon-heart.svg" alt="">100 likes</span>
+                        <span class="text-primary-500">·</span>
+                        <span class="post-min-read text-primary-800">5 min read</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <div class="py-8 w-[300px] md:w-[400px] mr-8">
+            <article class="blogpost-item bg-neutral-50 rounded-40px relative overflow-hidden">
+                <div class="blogpost-item--thumbnail w-full">
+                    <img src="https://source.unsplash.com/random/?Landscape/" alt="Thumbnail for Post 1" class="object-cover w-full aspect-4/3 overflow-hidden rounded-40px">
+                </div>
+                <div class="blogpost-item--details p-6 gap-3 flex-col flex">
+                    <header>
+                    <div class="author-info flex flex-row gap-4 items-center">
+                        <img src="https://source.unsplash.com/random/?Portrait/" alt="Author Avatar" class="author-avatar w-8 aspect-square rounded-full">
+                        <span class="author-name">Skylar Westervelt</span>
+                        <span class="text-primary-500">·</span>
+                        <span class="post-meta text-primary-800"><time datetime="2024-05-01">May 1, 2024</time></span>
+                    </div>
+                    </header>
+                    <h3 class="text-2xl font-medium"><a href="#">A Cold Day for Mortar Explosions</a></h3>
+                    <p class="post-description font-light text-xl line-clamp-3">How I responded to two near-death experiences in Iraq haunted me for years — Bright but cold winter days, the sun illuminating a barren landscape, transport me back to deadly attacks on similar days at a U.S.</p>
+                    <div class="post-stats inline-flex items-center gap-4 text-xs">
+                    <span class="post-likes inline-flex gap-2 items-center"><img src="/assets/images/icons/icon-heart.svg" alt="">100 likes</span>
+                    <span class="text-primary-500">·</span>
+                    <span class="post-min-read text-primary-800">5 min read</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <div class="py-8 w-[300px] md:w-[400px] mr-8">
+            <article class="blogpost-item bg-neutral-50 rounded-40px relative overflow-hidden">
+                <div class="blogpost-item--thumbnail w-full">
+                    <img src="https://source.unsplash.com/random/?Landscape/" alt="Thumbnail for Post 1" class="object-cover w-full aspect-4/3 overflow-hidden rounded-40px">
+                </div>
+                <div class="blogpost-item--details p-6 gap-3 flex-col flex">
+                    <header>
+                    <div class="author-info flex flex-row gap-4 items-center">
+                        <img src="https://source.unsplash.com/random/?Portrait/" alt="Author Avatar" class="author-avatar w-8 aspect-square rounded-full">
+                        <span class="author-name">Skylar Westervelt</span>
+                        <span class="text-primary-500">·</span>
+                        <span class="post-meta text-primary-800"><time datetime="2024-05-01">May 1, 2024</time></span>
+                    </div>
+                    </header>
+                    <h3 class="text-2xl font-medium"><a href="#">A Cold Day for Mortar Explosions</a></h3>
+                    <p class="post-description font-light text-xl line-clamp-3">How I responded to two near-death experiences in Iraq haunted me for years — Bright but cold winter days, the sun illuminating a barren landscape, transport me back to deadly attacks on similar days at a U.S.</p>
+                    <div class="post-stats inline-flex items-center gap-4 text-xs">
+                    <span class="post-likes inline-flex gap-2 items-center"><img src="/assets/images/icons/icon-heart.svg" alt="">100 likes</span>
+                    <span class="text-primary-500">·</span>
+                    <span class="post-min-read text-primary-800">5 min read</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+              
+    </div>
+</section>
+

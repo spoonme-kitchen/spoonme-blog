@@ -142,5 +142,14 @@
     giftBtn();
     summaryApp();
     megaphone();
+
+    window.addEventListener("scroll", function(event){
+      var scroll = this.scrollY;
+      if(scroll > 400) {
+         this.document.getElementById("navBar").classList.add("bg-primary-300/90");
+      } else {
+         this.document.getElementById("navBar").classList.remove("bg-primary-300/90");
+      }
+      });
   </script>
 </html>

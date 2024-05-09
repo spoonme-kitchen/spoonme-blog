@@ -22,25 +22,25 @@ title: SpoonMe
     
     <div class="content-media relative w-full h-fit flex justify-center pointer-events-none">
         <span class="absolute w-fit h-fit z-0 bottom-0 pointer-events-none">
-            <img src="/assets/images/hero/bg-hero.svg" alt="" class="w-fit">
+            <img src="{{ '/assets/images/hero/bg-hero.svg' | relative_url }}" alt="" class="w-fit">
         </span>
         <picture class="relative -rotate-12 top-8">
-            <img class="w-fit relative" src="/assets/images/hero/app-hero-posts.png" alt="">
-            <img src="/assets/images/hero/app-hero-posts-highlight.png" alt="" class="absolute top-44 -left-8 drop-shadow-2xl">
+            <img class="w-fit relative" src="{{ '/assets/images/hero/app-hero-posts.png' | relative_url }}" alt="">
+            <img src="{{ '/assets/images/hero/app-hero-posts-highlight.png' | relative_url }}" alt="" class="absolute top-44 -left-8 drop-shadow-2xl">
         </picture>
         <picture class="relative rotate-6 top-20">
-            <img class="w-fit relative" src="/assets/images/hero/app-hero-home.png" alt="">
+            <img class="w-fit relative" src="{{ '/assets/images/hero/app-hero-home.png' | relative_url }}" alt="">
             <span id="summaryApp" class="absolute top-24 left-12 drop-shadow-2xl scale-105"></span>
         </picture>
     </div>
     
     <div class="hidden lg:block wave-divider w-full absolute -bottom-[2px] h-auto z-20 pointer-events-none">
-        <img src="/assets/images/wave-divider.svg" alt="" class="w-full h-auto object-cover">
+        <img src="{{ '/assets/images/wave-divider.svg' | relative_url }}" alt="" class="w-full h-auto object-cover">
     </div>
 </section>
 
 <!-- Testimonials -->
-<section class="hidden testimonials py-28 flex flex-col gap-16 items-center relative bg-[url('/assets/images/bg-testimonials.svg')] bg-contain bg-center bg-no-repeat">
+<section class="hidden testimonials py-28 flex flex-col gap-16 items-center relative bg-[url('{{ '/assets/images/bg-testimonials.svg' | relative_url }}')] bg-contain bg-center bg-no-repeat">
     <div class="container flex flex-col max-w-2xl gap-6">
         <div class="info flex flex-col gap-4 items-center text-center">
             <div class="info--icon w-20 aspect-square flex items-center justify-center rounded-full bg-primary-200 pointer-events-none">
@@ -59,7 +59,7 @@ title: SpoonMe
             <div class="testimonial-item bg-pink-200 p-8 pt-0 rounded-40px relative">
                 <div class="flex flex-row items-end gap-4 relative -top-4">
                     <picture>
-                        <img src="assets/images/matt-testimonial-spoonme.png" class="w-20 bg-white aspect-square rounded-full border-4 border-pink-200" alt="">
+                        <img src="{{ '/assets/images/matt-testimonial-spoonme.png' | relative_url}}" class="w-20 bg-white aspect-square rounded-full border-4 border-pink-200" alt="">
                     </picture>
                     <h3 class="font-semibold text-2xl mb-4">Matt Duff</h3>
                 </div>
@@ -71,7 +71,7 @@ title: SpoonMe
             <div class="testimonial-item bg-green-200 p-8 pt-0 rounded-40px relative">
                 <div class="flex flex-row items-end gap-4 relative -top-4">
                     <picture>
-                        <img src="/assets/images/profile-testimonial-3.jpg" class="w-20 bg-white aspect-square rounded-full border-4 border-green-200" alt="">
+                        <img src="{{ '/assets/images/profile-testimonial-3.jpg' | relative_url }}" class="w-20 bg-white aspect-square rounded-full border-4 border-green-200" alt="">
                     </picture>
                     <h3 class="font-semibold text-2xl mb-4">Jacob Smith</h3>
                 </div>
@@ -82,7 +82,7 @@ title: SpoonMe
             <div class="testimonial-item bg-orange-200 p-8 pt-0 rounded-40px relative">
                 <div class="flex flex-row items-end gap-4 relative -top-4">
                     <picture>
-                        <img src="/assets/images/ahren-testimonial-spoonme.png" class="w-20 bg-white aspect-square rounded-full border-4 border-orange-200" alt="">
+                        <img src="{{ '/assets/images/ahren-testimonial-spoonme.png' | relative_url }}" class="w-20 bg-white aspect-square rounded-full border-4 border-orange-200" alt="">
                     </picture>
                     <h3 class="font-semibold text-2xl mb-4">Ahren Bonnema</h3>
                 </div>
@@ -93,7 +93,7 @@ title: SpoonMe
             <div class="testimonial-item bg-purple-200 p-8 pt-0 rounded-40px relative">
                 <div class="flex flex-row items-end gap-4 relative -top-4">
                     <picture>
-                        <img src="/assets/images/profile-testimonial-1.jpg" class="w-20 bg-white aspect-square rounded-full border-4 border-purple-200" alt="">
+                        <img src="{{ '/assets/images/profile-testimonial-1.jpg' | relative_url }}" class="w-20 bg-white aspect-square rounded-full border-4 border-purple-200" alt="">
                     </picture>
                     <h3 class="font-semibold text-2xl mb-4">Emma Williams</h3>
                 </div>
@@ -109,7 +109,7 @@ title: SpoonMe
     <div class="features container flex flex-col md:flex-row max-w-7xl gap-12 items-center justify-between">
         <div class="features--info w-full flex flex-col gap-6">
             <div class="info--icon w-16 aspect-square flex items-center justify-center rounded-full bg-orange-200 pointer-events-none">
-                <img src="/assets/images/icons/icon-who-is-spoonme.svg" alt="" class="">                  
+                <img src="{{ '/assets/images/icons/icon-who-is-spoonme.svg' | relative_url }}" alt="" class="">                  
             </div>
             <h2 class="font-outfit text-5xl font-medium">Who is Spoonme best suited for?</h2>
             <div class="features--info--question">
@@ -125,8 +125,8 @@ title: SpoonMe
             <span class="flare bg-yellow-200/40 w-[400px] h-[400px] rounded-full absolute -top-10 -left-10 rotate-45 blur-3xl"></span>
             <span class="flare bg-orange-400/80 w-[500px] h-[400px] rounded-full absolute bottom-0 -right-10 rotate-45 blur-3xl"></span>
             <picture class="flex w-full aspect-square relative overflow-hidden">
-                <img class="opacity-10 lg:opacity-100 absolute left-12 -top-20" src="/assets/images/features-1-mobiless-2.png" alt="">
-                <img class="absolute right-8 md:right-12 top-12" src="/assets/images/features-1-mobiless-1.png" alt="">
+                <img class="opacity-10 lg:opacity-100 absolute left-12 -top-20" src="{{ '/assets/images/features-1-mobiless-2.png' | relative_url }}" alt="">
+                <img class="absolute right-8 md:right-12 top-12" src="{{ '/assets/images/features-1-mobiless-1.png' | relative_url }}" alt="">
             </picture>
             <span class="w-full h-48 bg-gradient-to-t from-orange-300 to-transparent absolute bottom-0 flex"></span>
         </div>
@@ -135,7 +135,7 @@ title: SpoonMe
     <div class="hidden features container flex flex-col md:flex-row-reverse max-w-7xl gap-12 items-center justify-between">
         <div class="features--info w-full flex flex-col gap-6">
             <div class="info--icon w-16 aspect-square flex items-center justify-center rounded-full bg-green-200 pointer-events-none">
-                <img src="/assets/images/icons/icon-food-is-social.svg" alt="" class="">                  
+                <img src="{{ '/assets/images/icons/icon-food-is-social.svg' | relative_url }}" alt="" class="">                  
             </div>
             <h2 class="text-5xl font-medium">Food is social. Spoonme puts community first</h2>
             <p class="text-xl">Other applications are obsessed with weight loss. Spoonme is different. Spoonme wants to enable you to eat deliberately, but the beauty is really in the community. See what your friends and family are eating, save recipes to your cookbooks that you discover in your Feed, and effortlessly add recipes to your own cookbooks.</p>
@@ -145,8 +145,8 @@ title: SpoonMe
             <span class="flare bg-yellow-200/40 w-[400px] h-[400px] rounded-full absolute -top-10 -left-10 rotate-45 blur-3xl"></span>
             <span class="flare bg-green-400/80 w-[500px] h-[400px] rounded-full absolute bottom-0 -right-10 rotate-45 blur-3xl"></span>
             <picture class="flex w-full aspect-square relative overflow-hidden">
-                <img class="opacity-10 lg:opacity-100 absolute left-12 top-32" src="/assets/images/features-2-mobiless-2.png" alt="">
-                <img class="absolute right-8 md:right-12 top-12" src="/assets/images/features-2-mobiless-1.png" alt="">
+                <img class="opacity-10 lg:opacity-100 absolute left-12 top-32" src="{{ '/assets/images/features-2-mobiless-2.png' | relative_url }}" alt="">
+                <img class="absolute right-8 md:right-12 top-12" src="{{ '/assets/images/features-2-mobiless-1.png' | relative_url }}" alt="">
             </picture>
             <span class="w-full h-48 bg-gradient-to-t from-green-300 to-transparent absolute bottom-0 flex"></span>
         </div>
@@ -155,7 +155,7 @@ title: SpoonMe
     <div class="features container flex flex-col md:flex-row-reverse max-w-7xl gap-12 items-center justify-between">
         <div class="features--info w-full flex flex-col gap-6">
             <div class="info--icon w-16 aspect-square flex items-center justify-center rounded-full bg-purple-200 pointer-events-none">
-                <img src="/assets/images/icons/icon-incredibly-fast-food.svg" alt="" class="">                  
+                <img src="{{ '/assets/images/icons/icon-incredibly-fast-food.svg' | relative_url }}" alt="" class="">                  
             </div>
             <h2 class="text-5xl font-medium">Incredibly fast food entry, curated</h2>
             <p class="text-xl text-balance">Food apps should enable you to track your food quickly, while spending as little time as possible in the app. We don’t make more money the longer you stay in the app. We are trying to get you in and out as quickly as possible. We have a curated list of over 400,000 foods (that we are continually adding to) to help you quickly track what you are eating. And for those who prefer a more visual view, we have the option to upload a photo so you can see what you ate today in a snapshot. If you find some foods that aren’t in the database, reach out to <link to Mike> to get it added. We are a small team, and we are here for you to make life easier.</p>
@@ -164,8 +164,8 @@ title: SpoonMe
             <span class="flare bg-pink-200/80 w-[200px] h-[200px] rounded-full absolute top-0 rotate-45 blur-3xl"></span>
             <span class="flare bg-yellow-200/50 w-[500px] h-[400px] rounded-full absolute bottom-0 -right-10 rotate-45 blur-3xl"></span>
             <picture class="flex w-full aspect-square relative overflow-hidden">
-                <img class="absolute left-20 top-12 -rotate-12" src="/assets/images/features-3-mobiless-2.png" alt="">
-                <img class="hidden sm:block absolute md:right-8 lg:right-20 top-28 -rotate-12" src="/assets/images/features-3-mobiless-1.png" alt="">
+                <img class="absolute left-20 top-12 -rotate-12" src="{{ '/assets/images/features-3-mobiless-2.png' | relative_url }}" alt="">
+                <img class="hidden sm:block absolute md:right-8 lg:right-20 top-28 -rotate-12" src="{{ '/assets/images/features-3-mobiless-1.png' | relative_url }}" alt="">
             </picture>
             <span class="w-full h-48 bg-gradient-to-t from-purple-300 to-transparent absolute bottom-0 flex"></span>
         </div>
@@ -188,9 +188,9 @@ title: SpoonMe
     </div>
     <div class="relative container max-w-5xl flex flex-col md:flex-row gap-16 items-center justify-between">
         <picture class="w-full max-w-96 relative flex justify-center">
-            <img src="/assets/images/about-us-matt-and-kylee.png" class="w-96 aspect-square rounded-4xl rotate-6" alt="">
+            <img src="{{ '/assets/images/about-us-matt-and-kylee.png' | relative_url }}" class="w-96 aspect-square rounded-4xl rotate-6" alt="">
             <div class="dot-logo w-28 aspect-square bg-white flex items-center justify-center rounded-full absolute top-0 -right-10">
-                <img src="/assets/images/logo-icon.svg" alt="" class="rotate-12 w-12">
+                <img src="{{ '/assets/images/logo-icon.svg' | relative_url }}" alt="" class="rotate-12 w-12">
             </div>
             
             <span class="dot-purple bg-purple-400 rounded-full w-4 aspect-square absolute -left-10 top-40 rotate-12"></span>
@@ -204,7 +204,7 @@ title: SpoonMe
             <p class="text-xl font-light">
                 Matt and Kylee founded and financed Spoonme. We tried other food tracking apps, and were left uninspired. We wanted to make an app that was a joy to use, and connected you with the people you love.
             </p>
-            <span class="absolute -top-20 right-40"><img src="/assets/images/icons/icon-flame.svg" alt=""></span>
+            <span class="absolute -top-20 right-40"><img src="{{ '/assets/images/icons/icon-flame.svg' | relative_url }}" alt=""></span>
             <span class="dot-orange hidden lg:flex bg-orange-400 rounded-full w-2 aspect-square absolute -right-10 top-0"></span>
         </div>
     </div>
@@ -269,7 +269,7 @@ title: SpoonMe
                     <h3 class="text-2xl font-medium"><a href="#">A Cold Day for Mortar Explosions</a></h3>
                     <p class="post-description font-light text-xl line-clamp-3">How I responded to two near-death experiences in Iraq haunted me for years — Bright but cold winter days, the sun illuminating a barren landscape, transport me back to deadly attacks on similar days at a U.S.</p>
                     <div class="post-stats inline-flex items-center gap-4 text-xs">
-                    <span class="post-likes inline-flex gap-2 items-center"><img src="/assets/images/icons/icon-heart.svg" alt="">100 likes</span>
+                    <span class="post-likes inline-flex gap-2 items-center"><img src="{{ '' | relative_url }} /assets/images/icons/icon-heart.svg" alt="">100 likes</span>
                     <span class="text-primary-500">·</span>
                     <span class="post-min-read text-primary-800">5 min read</span>
                     </div>
@@ -294,7 +294,7 @@ title: SpoonMe
                     <h3 class="text-2xl font-medium"><a href="#">A Cold Day for Mortar Explosions</a></h3>
                     <p class="post-description font-light text-xl line-clamp-3">How I responded to two near-death experiences in Iraq haunted me for years — Bright but cold winter days, the sun illuminating a barren landscape, transport me back to deadly attacks on similar days at a U.S.</p>
                     <div class="post-stats inline-flex items-center gap-4 text-xs">
-                        <span class="post-likes inline-flex gap-2 items-center"><img src="/assets/images/icons/icon-heart.svg" alt="">100 likes</span>
+                        <span class="post-likes inline-flex gap-2 items-center"><img src="{{ '' | relative_url }} /assets/images/icons/icon-heart.svg" alt="">100 likes</span>
                         <span class="text-primary-500">·</span>
                         <span class="post-min-read text-primary-800">5 min read</span>
                     </div>
@@ -319,7 +319,7 @@ title: SpoonMe
                     <h3 class="text-2xl font-medium"><a href="#">A Cold Day for Mortar Explosions</a></h3>
                     <p class="post-description font-light text-xl line-clamp-3">How I responded to two near-death experiences in Iraq haunted me for years — Bright but cold winter days, the sun illuminating a barren landscape, transport me back to deadly attacks on similar days at a U.S.</p>
                     <div class="post-stats inline-flex items-center gap-4 text-xs">
-                    <span class="post-likes inline-flex gap-2 items-center"><img src="/assets/images/icons/icon-heart.svg" alt="">100 likes</span>
+                    <span class="post-likes inline-flex gap-2 items-center"><img src="{{ '' | relative_url }} /assets/images/icons/icon-heart.svg" alt="">100 likes</span>
                     <span class="text-primary-500">·</span>
                     <span class="post-min-read text-primary-800">5 min read</span>
                     </div>
@@ -344,7 +344,7 @@ title: SpoonMe
                     <h3 class="text-2xl font-medium"><a href="#">A Cold Day for Mortar Explosions</a></h3>
                     <p class="post-description font-light text-xl line-clamp-3">How I responded to two near-death experiences in Iraq haunted me for years — Bright but cold winter days, the sun illuminating a barren landscape, transport me back to deadly attacks on similar days at a U.S.</p>
                     <div class="post-stats inline-flex items-center gap-4 text-xs">
-                    <span class="post-likes inline-flex gap-2 items-center"><img src="/assets/images/icons/icon-heart.svg" alt="">100 likes</span>
+                    <span class="post-likes inline-flex gap-2 items-center"><img src="{{ '' | relative_url }} /assets/images/icons/icon-heart.svg" alt="">100 likes</span>
                     <span class="text-primary-500">·</span>
                     <span class="post-min-read text-primary-800">5 min read</span>
                     </div>

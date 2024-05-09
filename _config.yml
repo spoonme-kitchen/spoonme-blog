@@ -21,11 +21,9 @@
 title: SpoonMe
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
+  Being deliberate about food and sharing it with those you love should be a joy. Spoonme doesn't feel like a spreadsheet for your food, it feels like a burst of creativity and inspiration. Let's make delicious, healthy, food together!
 url: "https://spoonme.kitchen" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
 twitter_username: jekyllrb
 github_username:  jekyll
 

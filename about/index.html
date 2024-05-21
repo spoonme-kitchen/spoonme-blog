@@ -23,15 +23,9 @@
     <meta name="msapplication-TileImage" content="/assets/images/appicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#7973e1">
     
-    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/main.css" media="all">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js" integrity="sha512-jEnuDt6jfecCjthQAJ+ed0MTVA++5ZKmlUcmDGBv2vUI/REn6FuIdixLNnQT+vKusE2hhTk2is3cFvv5wA+Sgg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
   </head>
   <body class="body font-outfit text-primary-950">
     <header class="
@@ -41,7 +35,7 @@
         flex flex-row justify-between items-center
         w-full max-w-7xl max-w-
         rounded-3xl
-        px-8 py-4
+        px-4 py-4
         backdrop-blur-sm
         transition-colors
         duration-500
@@ -49,11 +43,11 @@
         <a href="#" class="brand-logo flex-shrink-0 max-w-32 md:max-w-none"><img src="/assets/images/logo_hor.svg" alt=""></a>
         <ul class="flex-row gap-4 hidden">
             <li><a href="#features" class="py-3 px-5 rounded-full font-outfit font-semibold text-primary-950 hover:bg-primary-500/20 transition-all ease-linear">Features</a></li>
-            <li><a href="#" class="py-3 px-5 rounded-full font-outfit font-semibold text-primary-950 hover:bg-primary-500/20 transition-all ease-linear">Blog</a></li>
+            <li><a href="#blog" class="py-3 px-5 rounded-full font-outfit font-semibold text-primary-950 hover:bg-primary-500/20 transition-all ease-linear">Blog</a></li>
         </ul>
         <div class="grow"></div>
-        <a href="https://app.spoonme.kitchen/users/log_in" class="py-3 px-10 font-outfit font-semibold text-primary-950 hover:underline transition-all ease-in">Log in</a>
-        <a href="https://app.spoonme.kitchen/users/register" id="primaryCTA" class="py-3 px-10 rounded-full border-2 border-primary-950 font-outfit font-semibold text-primary-950 hover:bg-primary-500/20 transition-all ease-in">Free trial</a>
+        <a href="https://app.spoonme.kitchen/users/log_in" class="py-2 mr-3 px-3 md:px-6 font-outfit font-semibold text-primary-950 hover:underline transition-all ease-in">Log in</a>
+        <a href="https://app.spoonme.kitchen/users/register" id="primaryCTA" class="py-2 px-3 md:px-6 rounded-full border-2 border-primary-950 font-outfit font-semibold text-primary-950 hover:bg-primary-500/20 transition-all ease-in">Free trial</a>
     </nav>
 </header>
 
@@ -99,6 +93,9 @@
 </footer>
 
   </body>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js" integrity="sha512-jEnuDt6jfecCjthQAJ+ed0MTVA++5ZKmlUcmDGBv2vUI/REn6FuIdixLNnQT+vKusE2hhTk2is3cFvv5wA+Sgg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script>
     $('.testimonials-carousel').slick({
       infinite: true,

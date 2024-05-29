@@ -27,16 +27,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   </head>
-  <body class="body font-outfit text-primary-950">
+  
+  <body class="body font-outfit text-primary-950 overflow-x-hidden">
     {% include nav.html %}
     
     {{ content }}
-
+    {% include block-support.html %}
     {% include footer.html %}
   </body>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js" integrity="sha512-jEnuDt6jfecCjthQAJ+ed0MTVA++5ZKmlUcmDGBv2vUI/REn6FuIdixLNnQT+vKusE2hhTk2is3cFvv5wA+Sgg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
   <script>
     $('.testimonials-carousel').slick({
       infinite: true,
@@ -168,5 +170,85 @@
          this.document.getElementById("navBar").classList.remove("bg-primary-300/90");
       }
       });
+
+    //Search
+    $(document).ready(function() {
+      // Get query parameter from URL
+      const urlParams = new URLSearchParams(window.location.search);
+      const query = urlParams.get('query').toLowerCase();
+    
+      // Fetch JSON data
+      $.getJSON('/search.json', function(data) {
+        const filteredPosts = data.filter(post => {
+          return (
+            post.title.toLowerCase().includes(query) || 
+            post.content.toLowerCase().includes(query) ||
+            post.author.name.toLowerCase().includes(query) // Check author's name
+          );
+          
+        });
+    
+        displayResults(filteredPosts);
+      });
+    
+      function displayResults(posts) {
+        const $postList = $('#search-results');
+        $postList.empty();
+    
+        if (posts.length === 0) {
+          $postList.append('<li>No posts found.</li>');
+          return;
+        }
+    
+        posts.forEach(post => {
+          const postItem = createPostItem(post);
+          $postList.append(postItem);
+        });
+      }
+    
+      function createPostItem(post) {
+        const postItem = `
+          <a href="${post.url}" class="post-item bg-primary-50 rounded-40px overflow-hidden hover:bg-primary-100" data-title="${post.title.toLowerCase()}" data-content="${stripHtml(post.content).toLowerCase()}">
+            <article class="p-6 flex flex-col gap-4">
+              <header class="post-header flex flex-row gap-4 items-center">
+                <div class="post-author flex flex-row gap-2 items-center">
+                  <img src="${post.author.avatar}" alt="${post.author.name}" class="post-author-avatar rounded-full" />
+                  <div class="post-author-name">${post.author.name}</div>
+                </div>
+                <time datetime="${new Date(post.date).toISOString()}" class="post-date">${new Date(post.date).toLocaleDateString()}</time>
+              </header>
+              <div class="post-content flex flex-row gap-4 items-center">
+                <div class="post-text flex flex-col gap-2 w-full">
+                  <h2 class="text-xl font-medium line-clamp-1">${post.title}</h2>
+                  <p class="line-clamp-3">${post.summary || truncate(stripHtml(post.excerpt), 50)}</p>
+                </div>
+                <img class="post-media rounded-3xl overflow-hidden w-40 aspect-square object-cover" src="${post.thumbnail}" alt="${post.title}" />
+              </div>
+              <div class="post-meta flex flex-row gap-4">
+                <span class="reading-time">${post.readingTime || 'N/A'}</span> <!-- Display reading time or 'N/A' -->
+              </div>
+            </article>
+          </a>
+        `;
+        return postItem;
+      }
+
+      function stripHtml(html) {
+        const tmp = document.createElement('div');
+        tmp.innerHTML = html;
+        return tmp.textContent || tmp.innerText || '';
+      }
+    
+      function truncate(text, limit) {
+        const words = text.split(' ');
+        if (words.length > limit) {
+          return words.slice(0, limit).join(' ') + '...';
+        }
+        return text;
+      }
+
+    });    
+
+
   </script>
 </html>

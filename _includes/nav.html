@@ -10,13 +10,22 @@
         transition-colors
         duration-500
         ">
-        <a href="#" class="brand-logo flex-shrink-0 max-w-32 md:max-w-none"><img src="{{ '/assets/images/logo_hor.svg' | relative_url}}" alt=""></a>
-        <ul class="flex-row gap-4 hidden">
-            <li><a href="#features" class="py-3 px-5 rounded-full font-outfit font-semibold text-primary-950 hover:bg-primary-500/20 transition-all ease-linear">Features</a></li>
-            <li><a href="#blog" class="py-3 px-5 rounded-full font-outfit font-semibold text-primary-950 hover:bg-primary-500/20 transition-all ease-linear">Blog</a></li>
+        <a href="/" class="brand-logo flex-shrink-0 max-w-32 md:max-w-none"><img src="{{ '/assets/images/logo_hor.svg' | relative_url}}" alt=""></a>
+        <ul class="
+            hidden
+            md:flex
+            flex-col
+            items-center md:items-start
+            md:flex-row
+            gap-2
+
+        ">
+            <li><a href="/#features" class="inline-flex py-3 px-5 rounded-full font-outfit font-semibold text-primary-950 hover:bg-primary-500/20 transition-all ease-linear">Features</a></li>
+            <li><a href="/blog" class="inline-flex py-3 px-5 rounded-full font-outfit font-semibold text-primary-950 hover:bg-primary-500/20 transition-all ease-linear">Blog</a></li>
         </ul>
-        <div class="grow"></div>
-        <a href="https://app.spoonme.kitchen/users/log_in" class="py-2 mr-3 px-3 md:px-6 font-outfit font-semibold text-primary-950 hover:underline transition-all ease-in">Log in</a>
-        <a href="https://app.spoonme.kitchen/users/register" id="primaryCTA" class="py-2 px-3 md:px-6 rounded-full border-2 border-primary-950 font-outfit font-semibold text-primary-950 hover:bg-primary-500/20 transition-all ease-in">Free trial</a>
+        <div class="actions flex flex-row gap-2 flex-shrink-0">
+            <a href="https://app.spoonme.kitchen/users/log_in" class="py-2 mr-3 px-3 md:px-6 font-outfit font-semibold text-primary-950 hover:underline transition-all ease-in">Log in</a>
+            <a href="https://app.spoonme.kitchen/users/register" id="primaryCTA" class="py-2 px-3 md:px-6 rounded-full border-2 border-primary-950 font-outfit font-semibold text-primary-950 hover:bg-primary-500/20 transition-all ease-in">Free trial</a>
+        </div>
     </nav>
 </header>

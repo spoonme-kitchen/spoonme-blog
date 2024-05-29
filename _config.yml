@@ -28,11 +28,18 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://spoonme.kitchen" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
+markdown: kramdown
+paginate: 8
+paginate_path: "/blog/page:num/"
 
 # Build settings
 plugins:
   - jekyll-feed
   - jekyll-postcss
+  - jekyll-toc
+  - jekyll-paginate
+
+require_relative: _plugins/generate_json.rb
 
 postcss:
   cache: false
@@ -41,6 +48,22 @@ sass:
   load_paths:
     - _sass
     - node_modules
+
+collections: 
+  authors:
+     output: true
+
+toc:
+  min_level: 1
+  max_level: 2
+  ordered_list: false
+  list_id: toc
+  list_class: section-nav
+  item_class: toc-entry
+  item_prefix: toc-
+
+tag_page_layout: tag
+tag_page_dir: tag
 
 include: ["node_modules/tailwindcss"]
 # Exclude from processing.

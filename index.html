@@ -27,7 +27,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   </head>
-  <body class="body font-outfit text-primary-950">
+  
+  <body class="body font-outfit text-primary-950 overflow-x-hidden">
     <header class="
     flex w-full p-4 
     fixed top-0 items-center justify-center z-50">
@@ -40,14 +41,23 @@
         transition-colors
         duration-500
         ">
-        <a href="#" class="brand-logo flex-shrink-0 max-w-32 md:max-w-none"><img src="/assets/images/logo_hor.svg" alt=""></a>
-        <ul class="flex-row gap-4 hidden">
-            <li><a href="#features" class="py-3 px-5 rounded-full font-outfit font-semibold text-primary-950 hover:bg-primary-500/20 transition-all ease-linear">Features</a></li>
-            <li><a href="#blog" class="py-3 px-5 rounded-full font-outfit font-semibold text-primary-950 hover:bg-primary-500/20 transition-all ease-linear">Blog</a></li>
+        <a href="/" class="brand-logo flex-shrink-0 max-w-32 md:max-w-none"><img src="/assets/images/logo_hor.svg" alt=""></a>
+        <ul class="
+            hidden
+            md:flex
+            flex-col
+            items-center md:items-start
+            md:flex-row
+            gap-2
+
+        ">
+            <li><a href="/#features" class="inline-flex py-3 px-5 rounded-full font-outfit font-semibold text-primary-950 hover:bg-primary-500/20 transition-all ease-linear">Features</a></li>
+            <li><a href="/blog" class="inline-flex py-3 px-5 rounded-full font-outfit font-semibold text-primary-950 hover:bg-primary-500/20 transition-all ease-linear">Blog</a></li>
         </ul>
-        <div class="grow"></div>
-        <a href="https://app.spoonme.kitchen/users/log_in" class="py-2 mr-3 px-3 md:px-6 font-outfit font-semibold text-primary-950 hover:underline transition-all ease-in">Log in</a>
-        <a href="https://app.spoonme.kitchen/users/register" id="primaryCTA" class="py-2 px-3 md:px-6 rounded-full border-2 border-primary-950 font-outfit font-semibold text-primary-950 hover:bg-primary-500/20 transition-all ease-in">Free trial</a>
+        <div class="actions flex flex-row gap-2 flex-shrink-0">
+            <a href="https://app.spoonme.kitchen/users/log_in" class="py-2 mr-3 px-3 md:px-6 font-outfit font-semibold text-primary-950 hover:underline transition-all ease-in">Log in</a>
+            <a href="https://app.spoonme.kitchen/users/register" id="primaryCTA" class="py-2 px-3 md:px-6 rounded-full border-2 border-primary-950 font-outfit font-semibold text-primary-950 hover:bg-primary-500/20 transition-all ease-in">Free trial</a>
+        </div>
     </nav>
 </header>
 
@@ -87,69 +97,6 @@
 </section>
 
 <!-- Testimonials -->
-<section class="hidden testimonials py-28 flex flex-col gap-16 items-center relative bg-[url('/assets/images/bg-testimonials.svg')] bg-contain bg-center bg-no-repeat">
-    <div class="container flex flex-col max-w-2xl gap-6">
-        <div class="info flex flex-col gap-4 items-center text-center">
-            <div class="info--icon w-20 aspect-square flex items-center justify-center rounded-full bg-primary-200 pointer-events-none">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class=" animate-pulse">
-                    <path d="M12.6988 3.45308L14.9056 8.09874C14.9558 8.21666 15.0347 8.31879 15.1346 8.39497C15.2344 8.47115 15.3516 8.51871 15.4746 8.53292L20.3461 9.28548C20.4871 9.30439 20.6201 9.36475 20.7295 9.45952C20.8389 9.55429 20.9201 9.67956 20.9638 9.82069C21.0075 9.96183 21.0117 10.113 20.9761 10.2566C20.9404 10.4001 20.8663 10.5301 20.7625 10.6314L17.2511 14.264C17.1615 14.3513 17.0942 14.4606 17.0554 14.5819C17.0167 14.7033 17.0076 14.8328 17.029 14.9587L17.8756 20.0675C17.9002 20.2143 17.8847 20.3653 17.8309 20.5034C17.7772 20.6414 17.6874 20.761 17.5717 20.8485C17.456 20.9359 17.3191 20.9878 17.1765 20.9981C17.034 21.0084 16.8915 20.9768 16.7653 20.9069L12.3796 18.49C12.2673 18.4325 12.1439 18.4026 12.0188 18.4026C11.8937 18.4026 11.7702 18.4325 11.6579 18.49L7.27219 20.9069C7.14602 20.9768 7.00355 21.0084 6.861 20.9981C6.71845 20.9878 6.58154 20.9359 6.46585 20.8485C6.35017 20.761 6.26034 20.6414 6.2066 20.5034C6.15287 20.3653 6.13737 20.2143 6.16189 20.0675L7.0085 14.9008C7.02995 14.7749 7.02088 14.6454 6.98209 14.524C6.94331 14.4027 6.87605 14.2934 6.78643 14.2061L3.23345 10.6314C3.12833 10.5274 3.05441 10.3937 3.02063 10.2468C2.98686 10.0998 2.99468 9.94575 3.04315 9.80331C3.09162 9.66087 3.17866 9.53614 3.29372 9.44423C3.40879 9.35232 3.54694 9.29718 3.69145 9.28548L8.56293 8.53292C8.68589 8.51871 8.80314 8.47115 8.90298 8.39497C9.00282 8.31879 9.08177 8.21666 9.13196 8.09874L11.3387 3.45308C11.3988 3.31778 11.4948 3.20322 11.6153 3.12294C11.7358 3.04266 11.8758 3 12.0188 3C12.1618 3 12.3018 3.04266 12.4223 3.12294C12.5428 3.20322 12.6387 3.31778 12.6988 3.45308Z" stroke="#5D42C8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>                    
-            </div>
-            <h2 class="text-5xl font-semibold font-outfit text-primary-900">People really like Spoonme</h2>
-            <p class="text-xl">Not everyone wants to lose weight. Hear what people like you are saying about an app that lets you can eat deliberately and celebrate the joy of food with the people you love (or just like).</p>
-        </div>
-
-    </div>
-
-    <div class="container testimonials-carousel w-full max-w-screen-2xl relative">
-        <div class="py-8 w-[300px] md:w-[400px] mr-8">
-            <div class="testimonial-item bg-pink-200 p-8 pt-0 rounded-40px relative">
-                <div class="flex flex-row items-end gap-4 relative -top-4">
-                    <picture>
-                        <img src="assets/images/matt-testimonial-spoonme.jpg" class="w-20 bg-white aspect-square rounded-full border-4 border-pink-200" alt="">
-                    </picture>
-                    <h3 class="font-semibold text-2xl mb-4">Matt Duff</h3>
-                </div>
-                <p>“I built the tool, but it works for me because it was exactly what I need to be deliberate about what I eat and find new recipes to help me with finding joy in my relationship with food.”</p>
-            </div>
-        </div>
-
-        <div class="py-8 w-[300px] md:w-[400px] mr-8">
-            <div class="testimonial-item bg-green-200 p-8 pt-0 rounded-40px relative">
-                <div class="flex flex-row items-end gap-4 relative -top-4">
-                    <picture>
-                        <img src="/assets/images/profile-testimonial-3.jpg" class="w-20 bg-white aspect-square rounded-full border-4 border-green-200" alt="">
-                    </picture>
-                    <h3 class="font-semibold text-2xl mb-4">Jacob Smith</h3>
-                </div>
-                <p>“I just got an early demo of HEY from @jasonfried. I can confirm this will be my new default email over Gmail… it’s a beautiful rethinking of everything wrong with email. I can’t wait for you all to play with it soon.”</p>
-            </div>
-        </div>
-        <div class="py-8 w-[300px] md:w-[400px] mr-8">
-            <div class="testimonial-item bg-orange-200 p-8 pt-0 rounded-40px relative">
-                <div class="flex flex-row items-end gap-4 relative -top-4">
-                    <picture>
-                        <img src="/assets/images/ahren-testimonial-spoonme.jpg" class="w-20 bg-white aspect-square rounded-full border-4 border-orange-200" alt="">
-                    </picture>
-                    <h3 class="font-semibold text-2xl mb-4">Ahren Bonnema</h3>
-                </div>
-                <p>“Overall appreciate the cleanliness and minimalism.”</p>
-            </div>
-        </div>
-        <div class="py-8 w-[300px] md:w-[400px] mr-8">
-            <div class="testimonial-item bg-purple-200 p-8 pt-0 rounded-40px relative">
-                <div class="flex flex-row items-end gap-4 relative -top-4">
-                    <picture>
-                        <img src="/assets/images/profile-testimonial-1.jpg" class="w-20 bg-white aspect-square rounded-full border-4 border-purple-200" alt="">
-                    </picture>
-                    <h3 class="font-semibold text-2xl mb-4">Emma Williams</h3>
-                </div>
-                <p>“I just got an early demo of HEY from @jasonfried. I can confirm this will be my new default email over Gmail… it’s a beautiful rethinking of everything wrong with email. I can’t wait for you all to play with it soon.”</p>
-            </div>
-        </div>       
-    </div>
-    <span class="hidden lg:flex flare bg-pink-100 w-[580px] h-[400px] rounded-full absolute -left-10 top-1/3 blur-3xl -z-10"></span>
-</section>
 
 <!-- Features -->
 <div class="px-8 py-32 flex flex-col gap-32 items-center" id="features">
@@ -258,7 +205,7 @@
 </section>
 
 <!-- Subscribe -->
-<section class="subscribe-block bg-primary-200 px-4 py-16 flex justify-center relative overflow-hidden">
+<section class="subscribe-block bg-primary-200 px-4 py-16 flex justify-center relative overflow-hidden ">
     <div class="flare bg-yellow-100/20 w-96 h-96 blur-3xl absolute -top-5 -left-10 z-0"></div>
     
     <div class="container max-w-7xl flex flex-col lg:flex-row items-center gap-8 relative">
@@ -287,6 +234,13 @@
     </div>
 </section>
 
+
+
+ 
+
+
+
+    <!--Support-->
 <section class="support-block bg-primary-50 px-4 py-20 flex justify-center relative overflow-hidden">
     
     <div class="container max-w-7xl flex flex-col lg:flex-row items-center gap-8 relative">
@@ -300,123 +254,6 @@
         </div>
     </div>
 </section>
-<!-- Blog resources -->
-
-<section class="hidden blogposts py-28 flex flex-col gap-16 items-center relative">
-    <div class="container flex flex-col max-w-7xl px-4 gap-6">
-        <div class="info flex flex-col lg:flex-row gap-4 justify-between lg:items-center">
-            <h2 class="text-5xl font-medium text-primary-900">Check out these resources to read more</h2>
-            <a href="#" class="py-4 w-fit font-medium border-b-2 border-primary-900">See more</a>
-        </div>
-
-    </div>
-
-    <div class="container blogposts-carousel w-full max-w-screen-2xl relative">
-        <div class="py-8 w-[300px] md:w-[400px] mr-8">
-            <article class="blogpost-item bg-neutral-50 rounded-40px relative overflow-hidden">
-                <div class="blogpost-item--thumbnail w-full">
-                    <img src="https://source.unsplash.com/random/?Landscape/" alt="Thumbnail for Post 1" class="object-cover w-full aspect-4/3 overflow-hidden rounded-40px">
-                </div>
-                <div class="blogpost-item--details p-6 gap-3 flex-col flex">
-                    <header>
-                    <div class="author-info flex flex-row gap-4 items-center">
-                        <img src="https://source.unsplash.com/random/?Portrait/" alt="Author Avatar" class="author-avatar w-8 aspect-square rounded-full">
-                        <span class="author-name">Skylar Westervelt</span>
-                        <span class="text-primary-500">·</span>
-                        <span class="post-meta text-primary-800"><time datetime="2024-05-01">May 1, 2024</time></span>
-                    </div>
-                    </header>
-                    <h3 class="text-2xl font-medium"><a href="#">A Cold Day for Mortar Explosions</a></h3>
-                    <p class="post-description font-light text-xl line-clamp-3">How I responded to two near-death experiences in Iraq haunted me for years — Bright but cold winter days, the sun illuminating a barren landscape, transport me back to deadly attacks on similar days at a U.S.</p>
-                    <div class="post-stats inline-flex items-center gap-4 text-xs">
-                    <span class="post-likes inline-flex gap-2 items-center"><img src="/assets/images/icons/icon-heart.svg" alt="">100 likes</span>
-                    <span class="text-primary-500">·</span>
-                    <span class="post-min-read text-primary-800">5 min read</span>
-                    </div>
-                </div>
-            </article>
-        </div>
-
-        <div class="py-8 w-[300px] md:w-[400px] mr-8">
-            <article class="blogpost-item bg-neutral-50 rounded-40px relative overflow-hidden">
-                <div class="blogpost-item--thumbnail w-full">
-                    <img src="https://source.unsplash.com/random/?Landscape/" alt="Thumbnail for Post 1" class="object-cover w-full aspect-4/3 overflow-hidden rounded-40px">
-                </div>
-                <div class="blogpost-item--details p-6 gap-3 flex-col flex">
-                    <header>
-                    <div class="author-info flex flex-row gap-4 items-center">
-                        <img src="https://source.unsplash.com/random/?Portrait/" alt="Author Avatar" class="author-avatar w-8 aspect-square rounded-full">
-                        <span class="author-name">Skylar Westervelt</span>
-                        <span class="text-primary-500">·</span>
-                        <span class="post-meta text-primary-800"><time datetime="2024-05-01">May 1, 2024</time></span>
-                    </div>
-                    </header>
-                    <h3 class="text-2xl font-medium"><a href="#">A Cold Day for Mortar Explosions</a></h3>
-                    <p class="post-description font-light text-xl line-clamp-3">How I responded to two near-death experiences in Iraq haunted me for years — Bright but cold winter days, the sun illuminating a barren landscape, transport me back to deadly attacks on similar days at a U.S.</p>
-                    <div class="post-stats inline-flex items-center gap-4 text-xs">
-                        <span class="post-likes inline-flex gap-2 items-center"><img src="/assets/images/icons/icon-heart.svg" alt="">100 likes</span>
-                        <span class="text-primary-500">·</span>
-                        <span class="post-min-read text-primary-800">5 min read</span>
-                    </div>
-                </div>
-            </article>
-        </div>
-
-        <div class="py-8 w-[300px] md:w-[400px] mr-8">
-            <article class="blogpost-item bg-neutral-50 rounded-40px relative overflow-hidden">
-                <div class="blogpost-item--thumbnail w-full">
-                    <img src="https://source.unsplash.com/random/?Landscape/" alt="Thumbnail for Post 1" class="object-cover w-full aspect-4/3 overflow-hidden rounded-40px">
-                </div>
-                <div class="blogpost-item--details p-6 gap-3 flex-col flex">
-                    <header>
-                    <div class="author-info flex flex-row gap-4 items-center">
-                        <img src="https://source.unsplash.com/random/?Portrait/" alt="Author Avatar" class="author-avatar w-8 aspect-square rounded-full">
-                        <span class="author-name">Skylar Westervelt</span>
-                        <span class="text-primary-500">·</span>
-                        <span class="post-meta text-primary-800"><time datetime="2024-05-01">May 1, 2024</time></span>
-                    </div>
-                    </header>
-                    <h3 class="text-2xl font-medium"><a href="#">A Cold Day for Mortar Explosions</a></h3>
-                    <p class="post-description font-light text-xl line-clamp-3">How I responded to two near-death experiences in Iraq haunted me for years — Bright but cold winter days, the sun illuminating a barren landscape, transport me back to deadly attacks on similar days at a U.S.</p>
-                    <div class="post-stats inline-flex items-center gap-4 text-xs">
-                    <span class="post-likes inline-flex gap-2 items-center"><img src="/assets/images/icons/icon-heart.svg" alt="">100 likes</span>
-                    <span class="text-primary-500">·</span>
-                    <span class="post-min-read text-primary-800">5 min read</span>
-                    </div>
-                </div>
-            </article>
-        </div>
-
-        <div class="py-8 w-[300px] md:w-[400px] mr-8">
-            <article class="blogpost-item bg-neutral-50 rounded-40px relative overflow-hidden">
-                <div class="blogpost-item--thumbnail w-full">
-                    <img src="https://source.unsplash.com/random/?Landscape/" alt="Thumbnail for Post 1" class="object-cover w-full aspect-4/3 overflow-hidden rounded-40px">
-                </div>
-                <div class="blogpost-item--details p-6 gap-3 flex-col flex">
-                    <header>
-                    <div class="author-info flex flex-row gap-4 items-center">
-                        <img src="https://source.unsplash.com/random/?Portrait/" alt="Author Avatar" class="author-avatar w-8 aspect-square rounded-full">
-                        <span class="author-name">Skylar Westervelt</span>
-                        <span class="text-primary-500">·</span>
-                        <span class="post-meta text-primary-800"><time datetime="2024-05-01">May 1, 2024</time></span>
-                    </div>
-                    </header>
-                    <h3 class="text-2xl font-medium"><a href="#">A Cold Day for Mortar Explosions</a></h3>
-                    <p class="post-description font-light text-xl line-clamp-3">How I responded to two near-death experiences in Iraq haunted me for years — Bright but cold winter days, the sun illuminating a barren landscape, transport me back to deadly attacks on similar days at a U.S.</p>
-                    <div class="post-stats inline-flex items-center gap-4 text-xs">
-                    <span class="post-likes inline-flex gap-2 items-center"><img src="/assets/images/icons/icon-heart.svg" alt="">100 likes</span>
-                    <span class="text-primary-500">·</span>
-                    <span class="post-min-read text-primary-800">5 min read</span>
-                    </div>
-                </div>
-            </article>
-        </div>
-
-        <!-- Support -->
-              
-    </div>
-</section>
-
 
 
     <footer class="
@@ -435,8 +272,8 @@
                 gap-2
                 md:mr-auto
             ">
-                <li><a href="#features" class="px-4 py-2 inline-flex">Features</a></li>
-                <li><a href="#" class="px-4 py-2 inline-flex">Blog</a></li>
+                <li><a href="/#features" class="px-4 py-2 inline-flex">Features</a></li>
+                <li><a href="/blog" class="px-4 py-2 inline-flex">Blog</a></li>
             </ul>
             <a href="https://app.spoonme.kitchen/users/register" class="py-3 px-10 rounded-full border-2 border-primary-900 font-outfit font-semibold text-primary-900 hover:bg-primary-500/20 transition-all ease-in">Free trial</a>
         </nav>
@@ -451,6 +288,7 @@
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js" integrity="sha512-jEnuDt6jfecCjthQAJ+ed0MTVA++5ZKmlUcmDGBv2vUI/REn6FuIdixLNnQT+vKusE2hhTk2is3cFvv5wA+Sgg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
   <script>
     $('.testimonials-carousel').slick({
       infinite: true,
@@ -582,5 +420,85 @@
          this.document.getElementById("navBar").classList.remove("bg-primary-300/90");
       }
       });
+
+    //Search
+    $(document).ready(function() {
+      // Get query parameter from URL
+      const urlParams = new URLSearchParams(window.location.search);
+      const query = urlParams.get('query').toLowerCase();
+    
+      // Fetch JSON data
+      $.getJSON('/search.json', function(data) {
+        const filteredPosts = data.filter(post => {
+          return (
+            post.title.toLowerCase().includes(query) || 
+            post.content.toLowerCase().includes(query) ||
+            post.author.name.toLowerCase().includes(query) // Check author's name
+          );
+          
+        });
+    
+        displayResults(filteredPosts);
+      });
+    
+      function displayResults(posts) {
+        const $postList = $('#search-results');
+        $postList.empty();
+    
+        if (posts.length === 0) {
+          $postList.append('<li>No posts found.</li>');
+          return;
+        }
+    
+        posts.forEach(post => {
+          const postItem = createPostItem(post);
+          $postList.append(postItem);
+        });
+      }
+    
+      function createPostItem(post) {
+        const postItem = `
+          <a href="${post.url}" class="post-item bg-primary-50 rounded-40px overflow-hidden hover:bg-primary-100" data-title="${post.title.toLowerCase()}" data-content="${stripHtml(post.content).toLowerCase()}">
+            <article class="p-6 flex flex-col gap-4">
+              <header class="post-header flex flex-row gap-4 items-center">
+                <div class="post-author flex flex-row gap-2 items-center">
+                  <img src="${post.author.avatar}" alt="${post.author.name}" class="post-author-avatar rounded-full" />
+                  <div class="post-author-name">${post.author.name}</div>
+                </div>
+                <time datetime="${new Date(post.date).toISOString()}" class="post-date">${new Date(post.date).toLocaleDateString()}</time>
+              </header>
+              <div class="post-content flex flex-row gap-4 items-center">
+                <div class="post-text flex flex-col gap-2 w-full">
+                  <h2 class="text-xl font-medium line-clamp-1">${post.title}</h2>
+                  <p class="line-clamp-3">${post.summary || truncate(stripHtml(post.excerpt), 50)}</p>
+                </div>
+                <img class="post-media rounded-3xl overflow-hidden w-40 aspect-square object-cover" src="${post.thumbnail}" alt="${post.title}" />
+              </div>
+              <div class="post-meta flex flex-row gap-4">
+                <span class="reading-time">${post.readingTime || 'N/A'}</span> <!-- Display reading time or 'N/A' -->
+              </div>
+            </article>
+          </a>
+        `;
+        return postItem;
+      }
+
+      function stripHtml(html) {
+        const tmp = document.createElement('div');
+        tmp.innerHTML = html;
+        return tmp.textContent || tmp.innerText || '';
+      }
+    
+      function truncate(text, limit) {
+        const words = text.split(' ');
+        if (words.length > limit) {
+          return words.slice(0, limit).join(' ') + '...';
+        }
+        return text;
+      }
+
+    });    
+
+
   </script>
 </html>

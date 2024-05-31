@@ -27,7 +27,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   </head>
-  <body class="body font-outfit text-primary-950">
+  
+  <body class="body font-outfit text-primary-950 overflow-x-hidden">
     <header class="
     flex w-full p-4 
     fixed top-0 items-center justify-center z-50">
@@ -40,14 +41,23 @@
         transition-colors
         duration-500
         ">
-        <a href="#" class="brand-logo flex-shrink-0 max-w-32 md:max-w-none"><img src="/assets/images/logo_hor.svg" alt=""></a>
-        <ul class="flex-row gap-4 hidden">
-            <li><a href="#features" class="py-3 px-5 rounded-full font-outfit font-semibold text-primary-950 hover:bg-primary-500/20 transition-all ease-linear">Features</a></li>
-            <li><a href="#blog" class="py-3 px-5 rounded-full font-outfit font-semibold text-primary-950 hover:bg-primary-500/20 transition-all ease-linear">Blog</a></li>
+        <a href="/" class="brand-logo flex-shrink-0 max-w-32 md:max-w-none"><img src="/assets/images/logo_hor.svg" alt=""></a>
+        <ul class="
+            hidden
+            md:flex
+            flex-col
+            items-center md:items-start
+            md:flex-row
+            gap-2
+
+        ">
+            <li><a href="/#features" class="inline-flex py-3 px-5 rounded-full font-outfit font-semibold text-primary-950 hover:bg-primary-500/20 transition-all ease-linear">Features</a></li>
+            <li><a href="/blog" class="inline-flex py-3 px-5 rounded-full font-outfit font-semibold text-primary-950 hover:bg-primary-500/20 transition-all ease-linear">Blog</a></li>
         </ul>
-        <div class="grow"></div>
-        <a href="https://app.spoonme.kitchen/users/log_in" class="py-2 mr-3 px-3 md:px-6 font-outfit font-semibold text-primary-950 hover:underline transition-all ease-in">Log in</a>
-        <a href="https://app.spoonme.kitchen/users/register" id="primaryCTA" class="py-2 px-3 md:px-6 rounded-full border-2 border-primary-950 font-outfit font-semibold text-primary-950 hover:bg-primary-500/20 transition-all ease-in">Free trial</a>
+        <div class="actions flex flex-row gap-2 flex-shrink-0">
+            <a href="https://app.spoonme.kitchen/users/log_in" class="py-2 mr-3 px-3 md:px-6 font-outfit font-semibold text-primary-950 hover:underline transition-all ease-in">Log in</a>
+            <a href="https://app.spoonme.kitchen/users/register" id="primaryCTA" class="py-2 px-3 md:px-6 rounded-full border-2 border-primary-950 font-outfit font-semibold text-primary-950 hover:bg-primary-500/20 transition-all ease-in">Free trial</a>
+        </div>
     </nav>
 </header>
 
@@ -73,6 +83,21 @@
   <p>The requested page could not be found.</p>
 </div>
 
+    <!--Support-->
+<section class="support-block bg-primary-50 px-4 py-20 flex justify-center relative overflow-hidden">
+    
+    <div class="container max-w-7xl flex flex-col lg:flex-row items-center gap-8 relative">
+        <div class="flare bg-primary-200/50 w-96 h-96 blur-3xl absolute top-20 left-0 z-0 pointer-events-none"></div>
+        <span class="dot-purple bg-purple-400 rounded-full w-4 aspect-square absolute -left-10 top-40 rotate-12"></span>
+        <span class="dot-purple bg-green-400 rounded-full w-2 aspect-square absolute right-10 bottom-0 rotate-12"></span>
+        <span class="dot-purple bg-pink-400 rounded-full w-2 aspect-square absolute -top-10 left-10 rotate-12"></span>
+        <div class="subscribe-block--content flex flex-col gap-4 lg:w-1/2 relative">
+            <h2 class="font-outfit font-semibold text-2xl">We’d love to help you get the most out of Spoonme. Please reach out if you have any questions:</h2>
+            <a href="mailto:support@spoonme.kitchen" class="text-xl text-primary-500 font-bold underline hover:text-primary-400">support@spoonme.kitchen</a>
+        </div>
+    </div>
+</section>
+
 
     <footer class="
     bg-primary-50 
@@ -90,8 +115,8 @@
                 gap-2
                 md:mr-auto
             ">
-                <li><a href="#features" class="px-4 py-2 inline-flex">Features</a></li>
-                <li><a href="#" class="px-4 py-2 inline-flex">Blog</a></li>
+                <li><a href="/#features" class="px-4 py-2 inline-flex">Features</a></li>
+                <li><a href="/blog" class="px-4 py-2 inline-flex">Blog</a></li>
             </ul>
             <a href="https://app.spoonme.kitchen/users/register" class="py-3 px-10 rounded-full border-2 border-primary-900 font-outfit font-semibold text-primary-900 hover:bg-primary-500/20 transition-all ease-in">Free trial</a>
         </nav>
@@ -106,6 +131,7 @@
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js" integrity="sha512-jEnuDt6jfecCjthQAJ+ed0MTVA++5ZKmlUcmDGBv2vUI/REn6FuIdixLNnQT+vKusE2hhTk2is3cFvv5wA+Sgg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
   <script>
     $('.testimonials-carousel').slick({
       infinite: true,
@@ -237,5 +263,85 @@
          this.document.getElementById("navBar").classList.remove("bg-primary-300/90");
       }
       });
+
+    //Search
+    $(document).ready(function() {
+      // Get query parameter from URL
+      const urlParams = new URLSearchParams(window.location.search);
+      const query = urlParams.get('query').toLowerCase();
+    
+      // Fetch JSON data
+      $.getJSON('/search.json', function(data) {
+        const filteredPosts = data.filter(post => {
+          return (
+            post.title.toLowerCase().includes(query) || 
+            post.content.toLowerCase().includes(query) ||
+            post.author.name.toLowerCase().includes(query) // Check author's name
+          );
+          
+        });
+    
+        displayResults(filteredPosts);
+      });
+    
+      function displayResults(posts) {
+        const $postList = $('#search-results');
+        $postList.empty();
+    
+        if (posts.length === 0) {
+          $postList.append('<li>No posts found.</li>');
+          return;
+        }
+    
+        posts.forEach(post => {
+          const postItem = createPostItem(post);
+          $postList.append(postItem);
+        });
+      }
+    
+      function createPostItem(post) {
+        const postItem = `
+          <a href="${post.url}" class="post-item bg-primary-50 rounded-40px overflow-hidden hover:bg-primary-100" data-title="${post.title.toLowerCase()}" data-content="${stripHtml(post.content).toLowerCase()}">
+            <article class="p-6 flex flex-col gap-4">
+              <header class="post-header flex flex-row gap-4 items-center">
+                <div class="post-author flex flex-row gap-2 items-center">
+                  <img src="${post.author.avatar}" alt="${post.author.name}" class="post-author-avatar rounded-full" />
+                  <div class="post-author-name">${post.author.name}</div>
+                </div>
+                <time datetime="${new Date(post.date).toISOString()}" class="post-date">${new Date(post.date).toLocaleDateString()}</time>
+              </header>
+              <div class="post-content flex flex-row gap-4 items-center">
+                <div class="post-text flex flex-col gap-2 w-full">
+                  <h2 class="text-xl font-medium line-clamp-1">${post.title}</h2>
+                  <p class="line-clamp-3">${post.summary || truncate(stripHtml(post.excerpt), 50)}</p>
+                </div>
+                <img class="post-media rounded-3xl overflow-hidden w-40 aspect-square object-cover" src="${post.thumbnail}" alt="${post.title}" />
+              </div>
+              <div class="post-meta flex flex-row gap-4">
+                <span class="reading-time">${post.readingTime || 'N/A'}</span> <!-- Display reading time or 'N/A' -->
+              </div>
+            </article>
+          </a>
+        `;
+        return postItem;
+      }
+
+      function stripHtml(html) {
+        const tmp = document.createElement('div');
+        tmp.innerHTML = html;
+        return tmp.textContent || tmp.innerText || '';
+      }
+    
+      function truncate(text, limit) {
+        const words = text.split(' ');
+        if (words.length > limit) {
+          return words.slice(0, limit).join(' ') + '...';
+        }
+        return text;
+      }
+
+    });    
+
+
   </script>
 </html>

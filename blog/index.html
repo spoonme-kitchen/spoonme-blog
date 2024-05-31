@@ -1,0 +1,81 @@
+---
+layout: default
+title: Blog
+---
+
+<header class="blog-hero px-8 pt-32 flex flex-col gap-32 items-center relative">
+    <span class="decorative pointer-events-none absolute z-0
+        top-0 right-0
+
+    ">
+        <img src="/assets/images/bg-blog-hero.svg" alt="" class="">
+    </span>
+    <div class="container flex flex-col md:flex-row max-w-7xl gap-12 items-center justify-between relative">
+      <div class="blog-hero--content py-20 w-full md:w-3/4">
+        <h1 class="text-6xl lg:text-8xl font-semibold">All news and tips <br> in one place</h1>
+      </div>
+
+      <div class="hidden md:flex blog-hero--media p-4 w-full md:w-1/2 items-center justify-center">
+        <img src="/assets/images/logo-icon.svg" alt="{{site.title}}" class="w-48 lg:w-64 rotate-[25deg]">
+      </div>
+      
+    </div>
+</header>
+
+<!-- Wrappers -->
+<div class="px-8 pt-8 pb-40 flex flex-col gap-32 items-center relative">
+  <div class="main-content-wrapper w-full max-w-7xl flex flex-grow flex-col md:flex-row gap-12 lg:gap-20">
+      
+    <!-- Blog Posts -->
+    {% if site.posts.size == 0 %}
+      <main class="blog-posts flex-1 grid grid-cols-1 lg:grid-cols-2 gap-4">
+        <div class="empty mb-6 w-full col-span-1 lg:col-span-2">
+          <p class="text-xl font-semibold mb-4">There are no posts yet. Check back soon for updates!</p>
+          {% include block-subscribe.html class="rounded-3xl" %}
+        </div>
+      </main>
+    {% else %}
+      <main class="blog-posts grid grid-cols-1 lg:grid-cols-2 gap-4 h-fit w-full">
+                
+        <!-- Html Elements for Search -->
+        <div id="search-container" class="col-span-2">
+          <form action="/search.html" method="get">
+            <div class="flex flex-row flex-wrap w-full justify-between items-center relative">
+              <input type="text" name="query" id="search-input" placeholder="Search by post, author, tag, category..." class="p-6 w-full rounded-full bg-primary-50 focus:outline focus:outline-offset-2 focus:outline-4 outline-primary-500">
+              <button type="submit" class="z-10 cursor-pointer py-4 px-8 bg-primary-900 text-white rounded-full hover:bg-primary-800 absolute top-2 right-2">Search</button>
+            </div>
+          </form>
+        </div>
+
+        
+
+        <div id="postList" class="col-span-2 lg:col-span-2 grid grid-cols-1 lg:grid-cols-2 gap-4 h-fit">
+          {% for post in paginator.posts %}
+              {% include blog-article.html %}
+          {% endfor %}
+        </div>
+      
+        <!-- Pagination links -->
+        <div class="pagination col-span-1 lg:col-span-2 py-4 flex flex-row gap-4 items-center justify-between">
+            {% if paginator.previous_page %}
+            <a href="{{ paginator.previous_page_path }}" class="previous py-3 px-10 rounded-full border-2 border-primary-900 font-outfit font-semibold text-primary-900 hover:bg-primary-500/20 transition-all ease-in">
+                Previous
+            </a>
+            {% else %}
+            <span class="previous py-3 px-10 rounded-full border-2 border-primary-900/20 font-outfit font-semibold text-primary-900 opacity-15 pointer-events-none">Previous</span>
+            {% endif %}
+            <span class="page_number ">
+            {{ paginator.page }} of {{ paginator.total_pages }}
+            </span>
+            {% if paginator.next_page %}
+            <a href="{{ paginator.next_page_path }}" class="next py-3 px-10 rounded-full border-2 border-primary-900 font-outfit font-semibold text-primary-900 hover:bg-primary-500/20 transition-all ease-in">Next</a>
+            {% else %}
+            <span class="next py-3 px-10 rounded-full border-2 border-primary-900/20 font-outfit font-semibold text-primary-900 opacity-35 pointer-events-none">Next</span>
+            {% endif %}
+        </div>
+      </main>
+      {% include blog-sidebar.html %}
+    {% endif %}
+  
+  </div>
+</div>

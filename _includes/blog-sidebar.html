@@ -1,0 +1,61 @@
+<aside class="blog-sidebar w-full md:w-48 lg:w-64 flex flex-col gap-8 flex-shrink-0">
+    <!-- Popular Posts Section -->
+    <section class="popular-posts flex flex-col gap-4">
+        <h2 class="text-2xl font-medium">Popular</h2>
+        <ul class="list-none flex flex-col gap-2">
+            {% for post in site.posts limit: 3 %}
+            <li class="border-b-2 last:border-none py-4">
+                <a href="{{ post.url }}" class="hover:text-primary-500 flex flex-row justify-between gap-4">
+                    <img src="{{ post.thumbnail }}" alt="" class="w-10 h-16 rounded-xl object-cover">
+                    <div class="post-wrapper flex flex-col w-full gap-2">
+                        <header class="post-header flex flex-row justify-between items-center text-xs">
+                            <div class="post-author flex flex-row gap-2 items-center">
+                                {% assign author = site.data.authors[post.author] %}
+                                <span class="post-author-name">{{ author.name }}</span>
+                            </div>
+                            <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date_to_string }}</time>
+                        </header>
+                        <h3 class="text-sm font-medium leading-relaxed line-clamp-2">{{ post.title }}</h3>
+                    </div>
+                </a>
+            </li>
+            {% endfor %}
+            <a href="#" class="text-primary-950 hover:text-primary-600 hover:underline">See all</a>
+        </ul>
+    </section>
+
+    <!-- Topics Section -->
+    <section class="topics flex flex-col gap-4">
+        <h2 class="text-2xl font-medium">Topics</h2>
+        <ul class=" list-none inline-flex flex-wrap gap-2">
+            {% for tag in site.tags limit:5 %}
+            <li>
+                <a class="post-tag inline-flex px-4 py-2 bg-primary-50 hover:bg-primary-100 text-primary-600 rounded-xl" href="{{ site.baseurl }}/tag/{{ tag[0] }}">#{{ tag[0] }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
+
+    <!-- Category Section -->
+    <section class="category-blog flex flex-col gap-4">
+        <h2 class="text-2xl font-medium">How to</h2>
+        
+        <ul class="list-none flex flex-col gap-4">
+            {% for post in site.categories.recipes limit:3 %}
+                <li>
+                    <a  href="{{ post.url }}" 
+                        class="flex
+                        p-4 rounded-3xl h-40 items-end 
+                        bg-primary-900
+                        text-white font-semibold
+                        relative overflow-hidden
+                        ">
+                        <img src="{{post.thumbnail}}" alt="{post.title}" class="absolute top-0 left-0 w-full h-full object-cover  pointer-events-none z-0">
+                        <span class="absolute bottom-0 left-0 w-full h-full bg-gradient-to-t from-black/90 via-30% via-black/80 to-80% to-black/0 pointer-events-none"></span>
+                        <span class="line-clamp-2 relative ">{{ post.title }}</span>
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </section>
+</aside>

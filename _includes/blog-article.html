@@ -1,0 +1,41 @@
+<a
+  href="{{ post.url}}"
+  class="post-item bg-primary-50 rounded-40px overflow-hidden hover:bg-primary-100"
+  data-title="{{ post.title | downcase }}" data-content="{{ post.content | strip_html | downcase }}"
+>
+  <article class="p-6 flex flex-col gap-4">
+    <header class="post-header flex flex-row gap-4 items-center">
+      <div class="post-author flex flex-row gap-2 items-center">
+        {% assign author = site.data.authors[post.author] %}
+        <img
+          src="{{ author.avatar }}"
+          alt="{{ author.name }}"
+          class="post-author-avatar rounded-full"
+        />
+        <div class="post-author-name">{{ author.name }}</div>
+      </div>
+      <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date"
+        >{{ post.date | date_to_string }}</time
+      >
+    </header>
+    <div class="post-content flex flex-row gap-4 items-center">
+      <div class="post-text flex flex-col gap-2 w-full">
+        <h2 class="text-xl font-medium line-clamp-1">{{ post.title }}</h2>
+        <p class="line-clamp-3">
+          {% if post.summary %} {{ post.summary}} {% else %} {{ post.excerpt |
+          strip_html | truncateword:50 }} {% endif %}
+        </p>
+      </div>
+      <img
+        class="post-media rounded-3xl overflow-hidden w-40 aspect-square object-cover"
+        src="{{ post.thumbnail }}"
+        alt="{{ post.title }}"
+      />
+    </div>
+    <div class="post-meta flex flex-row gap-4">
+      <span class="reading-time"
+        >{{ post.content | number_of_words | divided_by: 180 }} min read</span
+      >
+    </div>
+  </article>
+</a>

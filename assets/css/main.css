@@ -25,6 +25,83 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@layer base {
+    .post-article {
+        .toc {
+            ul {
+                @apply list-image-[url(/assets/images/icons/arrow-right.svg)] items-center;
+
+                li {
+                    @apply text-xl font-normal leading-relaxed;
+                 a {
+                    @apply text-primary-950 hover:underline hover:text-primary-950/80;
+
+                    }   
+                }
+            }
+        }
+        h1 {
+          @apply text-5xl;
+        }
+        h2 {
+          @apply text-4xl;
+        }
+    
+        h3 {
+            @apply text-3xl;
+          }
+
+        h1, h2, h3, h4, h5 {
+            strong {
+                @apply font-medium;
+            }
+        }
+    
+        p {
+            @apply text-lg font-normal leading-relaxed;
+        }
+
+        a {
+            @apply text-primary-500 hover:text-primary-600;
+        }
+
+        ul {
+            @apply list-disc list-inside marker:text-primary-400 mb-4;
+            
+            li {
+                @apply leading-relaxed;
+            }
+        }
+
+        img {
+            @apply rounded-40px;
+        }
+    
+        blockquote {
+            @apply p-4 pl-7 border-l-2 border-primary-500;
+        }
+
+        table {
+            @apply shadow rounded-3xl overflow-hidden shadow-primary-50 table-auto;
+            th {
+                @apply bg-primary-50 py-8 px-4 text-left font-normal;
+            }
+            td {
+                @apply  px-4 py-8;
+
+            }
+
+            tbody {
+                tr {
+                    @apply border-b border-x border-primary-50;
+                }
+            }
+        }
+        /* ... */
+    }
+  }
+
 /* Slick CSS */
 /* Slider */
 .slick-slider

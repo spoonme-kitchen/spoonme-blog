@@ -3,6 +3,7 @@ module.exports = {
       './_drafts/**/*.html',
       './_includes/**/*.html',
       './_layouts/**/*.html',
+      './blog/**/*.html',
       './_posts/*.md',
       './*.md',
       './*.html',
@@ -37,7 +38,6 @@ module.exports = {
                 '40px': '40px',
             },
         },
-    },
-    plugins: []
+    }
   }
   

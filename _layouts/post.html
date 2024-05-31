@@ -1,0 +1,43 @@
+---
+layout: default
+---
+{% assign author = site.data.authors[page.author] %}
+
+<article class="post-article px-8 pt-64 pb-32 flex flex-col gap-32 items-center">
+  <div class="container max-w-6xl relative w-full">
+      <header class="post-header flex flex-col gap-6 mb-14">
+        <div class="post-meta flex flex-row gap-3 items-center">
+          <img src="{{ author.avatar }}" alt="{{ author.name }}" class="post-avatar rounded-full">
+          <div class="post-author">{{ author.name }}</div>
+          <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">{{ page.date | date_to_string }}</time>
+          <span class="post-reading-time">{{ content | reading_time }}</span>
+        </div>
+        <h1 class="post-title text-5xl leading-snug">{{ page.title }}</h1>
+        <div class="post-tags">
+          {% for tag in page.tags %}
+            <a href="{{ site.baseurl }}/tag/{{ tag | slugify }}" class="post-tag inline-flex px-4 py-2 bg-primary-50 text-primary-600 rounded-lg">{{ tag }}</a>
+          {% endfor %}
+        </div>
+        <p>{{ page.summary }}</p>
+        <picture>
+          <img src="{{ page.thumbnail}}" alt="{{page.title}}" class="w-fit">
+        </picture>
+      </header>
+  
+      <main class="post-content flex flex-col gap-14">
+          <div class="toc">
+              <h2 class="mb-4">In this article:</h2>
+              <div>
+                  {% toc %}
+              </div>
+          </div>
+
+          {{ content }}
+        </main>
+        {% include social-sharing.html %}
+
+  </div>
+
+</article>
+
+{% include latest-posts.html %}

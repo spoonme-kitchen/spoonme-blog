@@ -1,0 +1,44 @@
+{% if site.posts.size == 0 %}
+
+ {% else %}  
+    <section class="blogposts py-28 flex flex-col gap-16 items-center relative">
+        <div class="container flex flex-col max-w-7xl px-4 gap-6">
+            <div class="info flex flex-col lg:flex-row gap-4 justify-between lg:items-center">
+                <h2 class="text-5xl font-medium text-primary-900">Check out these resources to read more</h2>
+                <a href="/blog" class="py-4 w-fit font-medium border-b-2 border-primary-900">See more</a>
+            </div>
+
+        </div>
+        
+        <div class="container blogposts-carousel w-full max-w-screen-2xl relative">
+            {% for post in site.posts limit:5 %}
+        
+            <div class="py-8 w-[300px] md:w-[400px] h-full mr-8">
+                <article class="blogpost-item bg-neutral-50 rounded-40px relative overflow-hidden">
+                    <div class="blogpost-item--thumbnail w-full">
+                        <img src="{{ post.thumbnail }}" alt="Thumbnail for Post 1" class="object-cover w-full aspect-4/3 overflow-hidden rounded-40px">
+                    </div>
+                    <div class="blogpost-item--details p-6 gap-3 flex-col flex">
+                        <header>
+                        <div class="author-info flex flex-row gap-4 items-center">
+                            {% assign author = site.data.authors[post.author] %}
+                            <img src="{{author.avatar}}" alt="Author Avatar" class="author-avatar w-8 aspect-square object-cover rounded-full">
+                            <span class="author-name">{{ author.name }}</span>
+                            <span class="text-primary-500">·</span>
+                            <span class="post-meta text-primary-800"><time datetime="{{ post.date }}">{{ post.date | date_to_string }}</time></span>
+                        </div>
+                        </header>
+                        <h3 class="text-2xl font-medium line-clamp-2"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+                        <p class="post-description font-light text-xl line-clamp-3">{{ post.excerpt | strip_html | truncatewords:75 }}</p>
+                        <div class="post-stats inline-flex items-center gap-4 text-xs">
+                        <span class="post-min-read text-primary-800">{% include reading_time.html %}</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        
+            {%endfor%}                    
+        </div>
+    </section>
+{% endif %}
+

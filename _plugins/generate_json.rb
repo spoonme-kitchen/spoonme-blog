@@ -1,4 +1,5 @@
 require 'json'
+require 'fileutils'  # This is necessary for creating directories
 
 module Jekyll
   class GenerateJSON < Generator
@@ -35,7 +36,11 @@ module Jekyll
         }
       end
 
-      File.write(File.join(site.dest, 'search.json'), JSON.pretty_generate(posts))
+      # Ensure the _site directory exists
+      dest_dir = site.dest
+      FileUtils.mkdir_p(dest_dir) unless Dir.exist?(dest_dir)
+
+      File.write(File.join(dest_dir, 'search.json'), JSON.pretty_generate(posts))
     end
 
     def calculate_reading_time(content)

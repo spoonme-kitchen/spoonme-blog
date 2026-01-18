@@ -5,6 +5,7 @@ To run locally:
 - Start the server: `bundle exec jekyll serve`
 - Visit the site at [localhost:4000](http://localhost:4000)
 
+
 ## Testing the Build
 
 Before pushing changes, you can test that the build process works locally:
